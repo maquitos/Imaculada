@@ -1,0 +1,18 @@
+.image {
+  width: 200px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+
+}
+.paragrafo1{
+  font-size: 40px;
+  font-family: Georgia;
+ 
+}
+ 
+.body {
+  background-color: #001F54;
+  color: white;
+
+}
