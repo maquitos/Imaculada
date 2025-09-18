@@ -3,8 +3,19 @@
   height: auto;   
   margin-top: 20px;
   border-radius: 15px;
-
 }
+.teste{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teste2{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .paragrafo1{
   font-size: 40px;
   font-family: Georgia;
