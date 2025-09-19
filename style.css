@@ -1,8 +1,28 @@
 .image {
-  width: 200px;   
+  width: 10px;   
   height: auto;   
   margin-top: 20px;
   border-radius: 15px;
+  
+}
+.paragafo1{
+  font-size:100px;
+  margin-top: center;
+}
+.paragafo2{
+  font-size:200px;
+  margin-top: center;
+}
+.image {
+  width: 100px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.imaculada{
+
+  height:40px;
+  width: 40px;
 }
 .teste{
   display: flex;
@@ -17,8 +37,9 @@
 }
 
 .paragrafo1{
-  font-size: 40px;
+  font-size: 15px;
   font-family: Georgia;
+  text-align: center;
  
 }
  
@@ -27,4 +48,7 @@
   color: white;
   font-size:20px;
 
+}
+.navbar .nav-link {
+  color: white !important; 
 }
