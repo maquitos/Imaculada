@@ -50,5 +50,20 @@
 
 }
 .navbar .nav-link {
-  color: white !important; 
+  margin-top: 10px;
+  color: white !important;
+  border-radius: 20px; 
+  transition-delay: 0.15;
+}
+
+#tetão .nav-link:hover{
+  background: rgba(114, 114, 114, 0.44);
+}
+
+#navbarNav{
+  justify-content: center;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
 }
