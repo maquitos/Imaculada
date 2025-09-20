@@ -19,10 +19,16 @@
   margin-top: 20px;
   border-radius: 15px;
 }
+.padroeira {
+  width:250px;   
+  height: 300px;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
 .imaculada{
 
-  height:40px;
-  width: 40px;
+  height:100px;
+  width: 100px;
 }
 .teste{
   display: flex;
@@ -42,6 +48,7 @@
   text-align: center;
  
 }
+
  
 .body {
   background-color: #001F54;
@@ -50,5 +57,36 @@
 
 }
 .navbar .nav-link {
-  color: white !important; 
+  margin-top: 10px;
+  color: white ;
+  border-radius: 20px; 
+  transition-delay: 0.20s;
+  transform: translateY(38%);
+  
+}
+
+#tetão .nav-link:hover{
+ color:goldenrod
+}
+
+#navbarNav{
+  justify-content: center;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar .nav-link2 {
+  padding: 0 !important; 
+}
+.botao{
+ 
+  pointer-events: none  !important; 
+  font-family: Great Vibes;
+  background-color: white !important;
+  color:black !important;
+
+ 
+  cursor: default !important; 
+ 
 }
