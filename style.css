@@ -160,3 +160,12 @@
 .cor{
   background-color: rgba(0, 0, 0, 0.5)!important;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center; /* centraliza logo e texto */
+  gap: 8px; /* espaço entre logo e nome */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* empurra o hambúrguer pra direita */
+}
