@@ -53,8 +53,6 @@
   }
   
 }
-
-
 .image {
   width: 10px;   
   height: auto;   
@@ -93,6 +91,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.paragrafo1{
+  font-size: 15px;
+  font-family: Georgia;
+  text-align: center;
+ 
 }
 
  
@@ -159,7 +164,7 @@
   position: fixed;
 }
 .fonte{
-  font-family: 'Poppins', sans-serif;
+ font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
