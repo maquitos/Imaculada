@@ -170,5 +170,10 @@
   margin-left: auto; /* empurra o hambúrguer pra direita */
 }
 .fixo{
+
   position: fixed;
+}
+.fonte{
+ font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
