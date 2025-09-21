@@ -1,0 +1,184 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: navy;
+  padding: 10px;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: navy;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+}
+
+
+
+
+
+.image {
+  width: 10px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+  
+}
+.paragafo1{
+  font-size:100px;
+  margin-top: center;
+}
+.paragafo2{
+  font-size:200px;
+  margin-top: center;
+}
+.image {
+  width: 100px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.padroeira {
+  width:250px;   
+  height: 300px;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.imaculada{
+
+  height:100px;
+  width: 100px;
+}
+.teste{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teste2{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragrafo1{
+  font-size: 15px;
+  font-family: Georgia;
+  text-align: center;
+ 
+}
+
+ 
+.body {
+  background-color: #001F54;
+  color: white;
+  font-size:20px;
+
+}
+.navbar .nav-link {
+  margin-top: 10px;
+  color: white ;
+  border-radius: 20px; 
+  transition-delay: 0.20s;
+  transform: translateY(38%);
+  
+}
+
+#tetão .nav-link:hover{
+ color:goldenrod
+}
+
+#navbarNav{
+  justify-content: center;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar .nav-link2 {
+  padding: 0 !important; 
+}
+.botao{
+ 
+  pointer-events: none  !important; 
+  font-family: Great Vibes;
+ 
+  background-color: none !important;
+  color:white !important;
+  transform: translateY(29%) !important;
+  font: bold;
+
+ 
+  cursor: default !important; 
+ 
+}
+.controle{
+  transform: translateY(-20%) !important;
+ 
+}
+.cor{
+  background-color: rgba(0, 0, 0, 0.5)!important;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center; /* centraliza logo e texto */
+  gap: 8px; /* espaço entre logo e nome */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* empurra o hambúrguer pra direita */
+}
+.fixo{
+
+  position: fixed;
+}
+.fonte{
+ font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.parteInferiorPag{
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 25%;
+}
