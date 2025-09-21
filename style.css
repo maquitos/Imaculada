@@ -1,3 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: navy;
+  padding: 10px;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: navy;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+}
+
+
+
+
+
 .image {
   width: 10px;   
   height: auto;   
@@ -83,10 +143,20 @@
  
   pointer-events: none  !important; 
   font-family: Great Vibes;
-  background-color: white !important;
-  color:black !important;
+ 
+  background-color: none !important;
+  color:white !important;
+  transform: translateY(29%) !important;
+  font: bold;
 
  
   cursor: default !important; 
  
+}
+.controle{
+  transform: translateY(-20%) !important;
+ 
+}
+.cor{
+  background-color: rgba(0, 0, 0, 0.5)!important;
 }
