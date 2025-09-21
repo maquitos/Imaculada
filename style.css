@@ -169,3 +169,6 @@
 .navbar-toggler {
   margin-left: auto; /* empurra o hambúrguer pra direita */
 }
+.fixo{
+  position: fixed;
+}
