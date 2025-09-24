@@ -15,5 +15,5 @@
   
         let resultado = document.getElementById("resultado");
         resultado.classList.remove("d-none");
-        alert(acertos);
+    
         resultado.innerHTML = `Você acertou <strong>${acertos}</strong> de 2 questões.`;}
