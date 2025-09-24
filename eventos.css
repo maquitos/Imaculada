@@ -170,12 +170,9 @@
 .oracao{
     transform: translateX(42%);
 }
-.hidden {
-  display: none;
-}
 .caixa{
     width: 400px;
     min-width: 200px;
     max-width : 600px;
-    transform: translateX(-40%);
+    margin: 0 auto;
 }

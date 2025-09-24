@@ -53,8 +53,6 @@
   }
   
 }
-
-
 .image {
   width: 10px;   
   height: auto;   
@@ -93,6 +91,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.paragrafo1{
+  font-size: 15px;
+  font-family: Georgia;
+  text-align: center;
+ 
 }
 
  
@@ -159,23 +164,11 @@
   position: fixed;
 }
 .fonte{
-  font-family: 'Poppins', sans-serif;
+ font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
 .parteInferiorPag{
   background: rgba(0, 0, 0, 0.5);
   margin-top: 25%;
-}
-.oracao{
-    transform: translateX(42%);
-}
-.hidden {
-  display: none;
-}
-.caixa{
-    width: 400px;
-    min-width: 200px;
-    max-width : 600px;
-    transform: translateX(-40%);
 }

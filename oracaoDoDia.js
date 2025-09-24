@@ -8,4 +8,7 @@
 
 
 const indice = Math.floor(Math.random() * mensagens.length);
-alert(mensagens[indice]);
+(mensagens[indice]);
+  function mostrarResposta() {
+    document.getElementById("meuBotao").classList.add("hidden");
+    document.getElementById("resposta").classList.remove("hidden"); }
