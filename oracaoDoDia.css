@@ -165,11 +165,13 @@
 
 .parteInferiorPag{
   background: rgba(0, 0, 0, 0.5);
-  margin-top: 25%;
+  margin-top: 35%;
 }
+/* 
 .oracao{
     transform: translateX(42%);
-}
+} 
+*/
 .hidden {
   display: none;
 }
@@ -177,5 +179,4 @@
     width: 400px;
     min-width: 200px;
     max-width : 600px;
-    transform: translateX(-40%);
 }
