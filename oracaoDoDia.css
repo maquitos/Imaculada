@@ -179,4 +179,43 @@
     width: 400px;
     min-width: 200px;
     max-width : 600px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(47, 42, 47, 0.71);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 10px;
+    margin: 10px;
 }
+
+.caixa.mostrar{
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.yate{
+  display: flex;
+  justify-content: center;
+  background-color: #090a46c1;
+  width: 30%;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.janta{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* Qualquer coisa, se ficar estranhos os botões das orações do dia, é só excluir esse css do btn-primary */
+.btn-primary{
+  width: 420px;
+}
+
