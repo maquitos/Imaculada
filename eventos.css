@@ -176,3 +176,9 @@
     max-width : 600px;
     margin: 0 auto;
 }
+
+.baixoNav{
+  background-color: #17032bac;
+  border-radius: 20px;
+  height: 10px;
+}
