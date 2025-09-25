@@ -182,3 +182,9 @@
   background: rgba(0, 0, 0, 0.5);
   margin-top: 35%;
 }
+
+.baixoNav{
+  background-color: #17032bac;
+  border-radius: 20px;
+  height: 10px;
+}
