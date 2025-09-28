@@ -17,35 +17,42 @@
 <body class="body">
   <nav class="navbar navbar-expand-lg navbar-dark cor">
     <div class="container-fluid">
-      <a href="index.html"> <img href="index.html" src="Imaculada-removebg-preview.png" alt="Descrição da imagem" class="image"></a>  
-      <a class="navbar-brand botao d-none d-lg-inline fonte " href="#">Paróquia Imaculada Conceição</a>  
+      <!-- Logo -->
+      <a href="index.html" class="d-flex align-items-center">
+        <img src="Imaculada-removebg-preview.png" alt="Descrição da imagem" class="image">
+      </a>  
 
-      <!-- Botão hambúrguer -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <!-- Marca -->
+      <a class="navbar-brand botao d-none d-lg-inline fonte" href="#">
+        Paróquia Imaculada Conceição
+      </a>  
+
+      <!-- Botão hamburguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" 
+        aria-controls="menuNav" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Links -->
+      <!-- Menu -->
       <div class="collapse navbar-collapse" id="menuNav">
-        <ul class="navbar-nav controle  ms-auto"id="tetão">
-          <br><br>
-          <span class="d-inline d-lg-none fonte"><br><br>Paróquia Imaculada Conceição</span>
-          <li class="nav-item"><a class="nav-link fonte " href="new_index.html">História</a></li>
-          <li class="nav-item"><a class="nav-link fonte " href="padroeira.html">Padroeira</a></li>
-          <li class="nav-item"><a class="nav-link fonte oracao " href="oracaoDoDia.html">Oração do dia</a></li>
-          <li class="nav-item"><a class="nav-link fonte " href="padres.html">Galeria de Padres</a></li>
-          <li class="nav-item"><a class="nav-link fonte" href="fotos.html">Galeria de Fotos</a></li><a>
-          <li class="nav-item"><a class="nav-link fonte" href="eventos.html">Eventos</a></li><a>
-          <li class="nav-item"><a class="nav-link fonte" href="quizBiblia.html">Quiz da Bíblia</a></li><a></a>
-          
-          
+        <br><br><br><br>
+        <ul class="navbar-nav ms-auto controle" id="tetão">
+          <span class="d-inline d-lg-none fonte mb-2">Paróquia Imaculada Conceição</span>
+          <li class="nav-item"><a class="nav-link fonte" href="new_index.html">História</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="padroeira.html">Padroeira</a></li>
+          <li class="nav-item"><a class="nav-link fonte oracao" href="oracaoDoDia.html">Oração do dia</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="padres.html">Galeria de Padres</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="fotos.html">Galeria de Fotos</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="quizBiblia.html">Quiz da Bíblia</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   
-  <div class="container teste2 p-5 text-white text-center baixoNav">
+  <div class="container teste2 p-5 text-white text-center baixoNav mt-5">
     <h2 class="paragrafo2">Gere aqui a sua oração do dia, sobre o que você quer orar?</h2>
   </div>
 
@@ -60,7 +67,7 @@
     <div class="oracao text-center yate"id="">
       <br><br>
       <div class="janta text-center">
-        <button type="button" class="btn btn-primary" id="meuBotao1" onclick="mostrarResposta(1)">Oração da Manhã</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao1" onclick="mostrarResposta(1)">Oração da Manhã</button>
         <div class="text-white hidden caixa"id="resposta1">
           Oração de Santo Inácio de Loyola Oferecimento do Dia
           <br>
@@ -75,14 +82,14 @@
           <br>
         </div>
 
-        <button type="button" class="btn btn-primary" id="meuBotao2" onclick="mostrarResposta(2)">Oração da Tarde</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao2" onclick="mostrarResposta(2)">Oração da Tarde</button>
         <div class="text-white hidden caixa"id="resposta2">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quo aliquid vel esse nesciunt laborum natus temporibus mollitia? Atque voluptatum sapiente laborum incidunt sint, tenetur tempore ex suscipit cupiditate vero.
           Soluta nobis in veniam quasi. Similique libero deserunt animi sunt expedita modi nostrum beatae numquam neque eveniet repellat reprehenderit necessitatibus, perferendis non debitis. Incidunt officiis at, cumque dolores ducimus deleniti?
           Inventore architecto nostrum officia, assumenda repellat eveniet, necessitatibus quod doloremque quis a quia officiis? Quibusdam, doloribus voluptates illo necessitatibus expedita, iusto provident a eveniet, modi minima nemo nisi minus adipisci.
         </div>
 
-        <button type="button" class="btn btn-primary" id="meuBotao3" onclick="mostrarResposta(3)">Oração da Noite</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao3" onclick="mostrarResposta(3)">Oração da Noite</button>
         <div class="text-white hidden caixa"id="resposta3">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ducimus, ex odio alias sit sint, iure quia commodi reprehenderit eos quis eum? Voluptatum sunt voluptates mollitia? Voluptatem ab earum quibusdam.
           Quia iusto illo ex inventore. Adipisci ea, incidunt illum rerum ipsa soluta voluptatem omnis, optio modi alias eveniet sapiente ratione, quibusdam delectus aperiam. Eaque sequi cupiditate, doloribus incidunt quis praesentium!
@@ -92,7 +99,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao4" onclick="mostrarResposta(4)">Família</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao4" onclick="mostrarResposta(4)">Família</button>
         <div class="text-white hidden caixa"id="resposta4">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, quos labore totam quidem, blanditiis quia veritatis eligendi quisquam aliquam iusto delectus distinctio odio voluptas modi nisi recusandae, quibusdam minus earum.
           Quasi ipsa molestiae voluptates ab placeat eum expedita explicabo, dolor maxime aperiam magni, facere voluptas vero. Aut, repellendus iusto. Inventore nobis nulla obcaecati fugit vitae excepturi eos eligendi, assumenda fugiat!
@@ -103,7 +110,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao5" onclick="mostrarResposta(5)">Saúde</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao5" onclick="mostrarResposta(5)">Saúde</button>
         <div class="text-white hidden caixa"id="resposta5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore, voluptates blanditiis sunt officiis quasi! Neque nulla pariatur perferendis ut dolores necessitatibus, dignissimos ducimus alias earum. Explicabo distinctio nesciunt voluptates.
           Quae tenetur est sunt velit maiores adipisci libero rerum asperiores, beatae ullam earum commodi numquam quibusdam doloremque quo, vel recusandae. Nostrum, suscipit modi deleniti nisi repellat accusantium commodi voluptate corporis.
@@ -117,7 +124,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao6" onclick="mostrarResposta(6)">Igreja</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao6" onclick="mostrarResposta(6)">Igreja</button>
         <div class="text-white hidden caixa"id="resposta6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sunt voluptate delectus aliquam omnis quos tenetur maxime iste eum, molestiae, ab nostrum est id quisquam eligendi quaerat quasi eaque magnam!
           Illum assumenda rem a minima pariatur tenetur dolores totam ipsa voluptatibus repellendus harum necessitatibus saepe nisi porro aspernatur alias reiciendis hic quae corrupti, dolorem blanditiis quasi nesciunt maiores laboriosam. Necessitatibus!
@@ -125,7 +132,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao7" onclick="mostrarResposta(7)">Relacionamentos</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao7" onclick="mostrarResposta(7)">Relacionamentos</button>
         <div class="text-white hidden caixa"id="resposta7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus amet fuga, temporibus iusto tempore veniam, dignissimos impedit explicabo non atque voluptatibus enim voluptates sit! Non, inventore. Quidem, praesentium repellat.
           Voluptatum impedit inventore consectetur eius quo? Nesciunt ipsum quas, possimus blanditiis veniam et obcaecati consequuntur nisi, temporibus, explicabo atque! Eveniet blanditiis recusandae odit consectetur beatae incidunt voluptate perferendis repellendus sed.
@@ -135,7 +142,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao8" onclick="mostrarResposta(8)">Alimentação</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao8" onclick="mostrarResposta(8)">Alimentação</button>
         <div class="text-white hidden caixa"id="resposta8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nesciunt dolore minima tempora esse. Hic necessitatibus minus saepe, a iusto illum distinctio quod neque voluptate natus voluptatem vitae ducimus eligendi!
           Nihil, natus temporibus explicabo deleniti, autem voluptatem impedit dignissimos esse neque, quibusdam ea corrupti nesciunt ut? Veritatis quidem odio vitae sunt eaque saepe non est nulla itaque perferendis. Beatae, a.
@@ -147,7 +154,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao9" onclick="mostrarResposta(9)">Estudos</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao9" onclick="mostrarResposta(9)">Estudos</button>
         <div class="text-white hidden caixa"id="resposta9">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consectetur modi saepe molestias quaerat iure repellendus molestiae quidem quos, provident, recusandae autem harum facilis, fugit laudantium praesentium temporibus obcaecati beatae?
           Delectus obcaecati, suscipit iusto officia temporibus aspernatur exercitationem consequatur architecto odio quos ullam vel ipsum debitis vero aliquam molestiae voluptas eum at possimus nemo perspiciatis laudantium in ipsam. Delectus, reiciendis.
@@ -156,7 +163,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" id="meuBotao10" onclick="mostrarResposta(10)">Trabalho</button>
+        <button type="button" class="btn btn-secondary" id="meuBotao10" onclick="mostrarResposta(10)">Trabalho</button>
         <div class="text-white hidden caixa"id="resposta10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ab repellendus ratione cupiditate. Cupiditate accusantium repellat quidem, tempora sed similique quia at velit non libero deserunt, deleniti, consectetur molestiae magni.
           Ad fugit vitae esse inventore consectetur vel adipisci praesentium obcaecati cupiditate, consequuntur sequi facere cum veniam commodi laudantium dolorum atque excepturi, perspiciatis voluptatibus iste possimus. Optio architecto nemo voluptatibus quam.
@@ -167,11 +174,9 @@
 
     </div>
   </div>
-  <div class="p-4 parteInferiorPag">
-    <div class="text-center">
-      <p>&copy; 2025 Paroquia Imaculada Conceição.</p>
-    </div>
-  </div>
+  <footer class="p-3 text-center parteInferiorPag">
+    <p class="m-0">&copy; 2025 Paroquia Imaculada Conceição.</p>
+  </footer>
 
 </body>
 

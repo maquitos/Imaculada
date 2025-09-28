@@ -26,3 +26,5 @@ const indice = Math.floor(Math.random() * mensagens.length);
         cardSelecionado.classList.add("mostrar");
       }, 10);
     }
+
+
