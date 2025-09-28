@@ -1,3 +1,20 @@
+/* BODY */
+
+.body {
+  background-color: #010054b7;
+  color: white;
+  font-size:20px;
+
+}
+
+/* NAVBAR */
+
+
+.navbar-toggler {
+  margin-left: auto; /* empurra o hambúrguer pra direita */
+}
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,11 +23,45 @@
   padding: 10px;
 }
 
+.navbar .nav-link {
+  margin-top: 10px;
+  color: white ;
+  border-radius: 20px; 
+  transition: 0.2s ease;
+  transform: translateY(38%);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* centraliza logo e texto */
+  gap: 8px; /* espaço entre logo e nome */
+}
+
+#tetão .nav-link:hover{
+ color:goldenrod
+}
+
+#navbarNav{
+  justify-content: center;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar .nav-link2 {
+  padding: 0 !important; 
+}
+
 .navbar .logo {
   color: white;
   font-weight: bold;
   font-size: 20px;
 }
+
+
+
+/* MENUS */
+
 
 .menu {
   display: flex;
@@ -32,6 +83,8 @@
 
 
 /* Mobile */
+
+
 @media (max-width: 600px) {
   .menu {
     display: none;
@@ -54,31 +107,31 @@
   
 }
 
+/* OUTROS BAGUI */
 
-.image {
-  width: 10px;   
-  height: auto;   
-  margin-top: 20px;
-  border-radius: 15px;
-  
-}
-.paragafo2{
+
+.paragrafo2{
   margin-top: center;
 }
+
+
 .image {
   width: 100px;   
   height: auto;   
   margin-top: 20px;
   border-radius: 15px;
 }
+
+
 .padroeira {
   width:250px;   
   height: 300px;   
   margin-top: 20px;
   border-radius: 15px;
 }
-.imaculada{
 
+
+.imaculada{
   height:100px;
   width: 100px;
 }
@@ -87,6 +140,8 @@
   align-items: center;
   justify-content: center;
 }
+
+
 .teste2{
   margin-top: 20px;
   display: flex;
@@ -94,86 +149,51 @@
   justify-content: center;
 }
 
- 
-.body {
-  background-color: #001F54;
-  color: white;
-  font-size:20px;
 
-}
-.navbar .nav-link {
-  margin-top: 10px;
-  color: white ;
-  border-radius: 20px; 
-  transition-delay: 0.20s;
-  transform: translateY(38%);
-  
-}
-
-#tetão .nav-link:hover{
- color:goldenrod
-}
-
-#navbarNav{
-  justify-content: center;
-}
-
-.navbar{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.navbar .nav-link2 {
-  padding: 0 !important; 
-}
 .botao{
- 
   pointer-events: none  !important; 
   font-family: Great Vibes;
- 
   background-color: none !important;
   color:white !important;
   transform: translateY(29%) !important;
   font: bold;
-
- 
   cursor: default !important; 
- 
 }
+
+
 .controle{
-  transform: translateY(-20%) !important;
- 
+  transform: translateY(-20%) !important; 
 }
+
+
 .cor{
   background-color: rgba(0, 0, 0, 0.5)!important;
 }
-.navbar-brand {
-  display: flex;
-  align-items: center; /* centraliza logo e texto */
-  gap: 8px; /* espaço entre logo e nome */
-}
 
-.navbar-toggler {
-  margin-left: auto; /* empurra o hambúrguer pra direita */
-}
+
+
 .fixo{
   position: fixed;
 }
+
+
 .fonte{
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
+
 .parteInferiorPag{
   background: rgba(0, 0, 0, 0.5);
   margin-top: 35%;
 }
-/* 
-.oracao{
-    transform: translateX(42%);
-} 
-*/
+
+
 .hidden {
   display: none;
 }
+
+
 .caixa{
     width: 400px;
     min-width: 200px;
@@ -184,9 +204,10 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
 }
+
 
 .caixa.mostrar{
   display: block;
@@ -194,14 +215,16 @@
   transform: translateY(0);
 }
 
+
 .yate{
   display: flex;
   justify-content: center;
-  background-color: #090a46c1;
+  background-color: #00000080;
   width: 500px;
   margin-top: 20px;
   border-radius: 20px;
 }
+
 
 .janta{
   margin-top: 30px;
@@ -214,12 +237,17 @@
 
 
 /* Qualquer coisa, se ficar estranhos os botões das orações do dia, é só excluir esse css do btn-primary */
-.btn-primary{
+.btn-secondary{
   width: 420px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  padding: 12px 24px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+
 @media (max-width: 600px) {
-  .btn-primary {
+  .btn-secondary {
     width: 240px;
     justify-content: center;
   }
@@ -228,14 +256,29 @@
     width: 220px;
     font-size: 14px;
   }
-  .paragafo2{
+  .paragrafo2{
     font-size: 20px;
   }
 }
 
+
+.btn-secondary:hover {
+  background: #ffffff;
+  transform: scale(1.025);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
 .baixoNav{
-  background-color: #17032bac;
+  background-color: #00000080;
   border-radius: 20px;
   height: 10px;
 }
 
+
+#meuBotao1, #meuBotao2, #meuBotao3, #meuBotao4, #meuBotao5, #meuBotao6, #meuBotao7, #meuBotao8, #meuBotao9, #meuBotao10{
+  color: white;
+  font-weight: bold;
+  background-color: rgba(132, 93, 169, 0.57);
+  border: none;
+}
