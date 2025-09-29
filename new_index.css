@@ -4,6 +4,10 @@
   background-color: #010054b7;
   color: white;
   font-size:20px;
+  /* Ajuda com o rodapé */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* NAVBAR */
@@ -193,7 +197,6 @@
 
 .parteInferiorPag{
   background: rgba(0, 0, 0, 0.5);
-  margin-top: 35%;
 }
 
 
@@ -201,4 +204,15 @@
   background-color: #00000080;
   border-radius: 20px;
   height: 10px;
+}
+
+/* Ajuda com o rodapé */
+
+.footer {
+  margin-top: auto;
+}
+
+
+.site-main {
+  flex: 1;
 }
