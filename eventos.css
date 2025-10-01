@@ -1,7 +1,7 @@
 /* BODY */
 
 .body {
-  background-color: #010054b7;
+  background-color: #f2d7d591;
   color: white;
   font-size:20px;
   /* Ajuda com o rodapé */
@@ -60,7 +60,7 @@
 
 
 .navbar{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1B2A49;
 }
 
 
@@ -175,7 +175,7 @@
 
 
 .cor{
-  background-color: rgba(0, 0, 0, 0.5)!important;
+  background-color: #1B2A49;
 }
 
 
@@ -191,7 +191,7 @@
 
 
 .parteInferiorPag{
-  background: rgba(0, 0, 0, 0.5);
+  background: #1B2A49;
 }
 
 
@@ -209,7 +209,7 @@
 
 
 .baixoNav{
-  background-color: #00000080;
+  background-color: #1B2A49;
   border-radius: 20px;
   height: 10px;
 }

@@ -1,7 +1,7 @@
 /* BODY */
 
 .body {
-  background-color: #010054b7;
+  background-color: #f2d7d591;
   color: white;
   font-size:20px;
   /* Ajuda com o rodapé */
@@ -49,7 +49,7 @@
 }
 
 .navbar{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1B2A49;
 }
 .navbar .nav-link2 {
   padding: 0 !important; 
@@ -170,7 +170,7 @@
 
 
 .cor{
-  background-color: rgba(0, 0, 0, 0.5)!important;
+  background-color: #1B2A49!important;
 }
 
 
@@ -187,7 +187,7 @@
 
 
 .parteInferiorPag{
-  background: rgba(0, 0, 0, 0.5);
+  background: #1B2A49;
   margin-top: 15%;
 }
 
@@ -203,7 +203,7 @@
     max-width : 600px;
     border-radius: 20px;
     border: none;
-    background-color: rgba(47, 42, 47, 0.71);
+    background-color: #1B2A49;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -222,7 +222,7 @@
 .yate{
   display: flex;
   justify-content: center;
-  background-color: #00000080;
+  background-color: #1B2A49;
   width: 500px;
   margin-top: 20px;
   border-radius: 20px;
@@ -273,16 +273,16 @@
 }
 
 .baixoNav{
-  background-color: #00000080;
+  background-color: #1B2A49;
   border-radius: 20px;
   height: 10px;
 }
 
 
 #meuBotao1, #meuBotao2, #meuBotao3, #meuBotao4, #meuBotao5, #meuBotao6, #meuBotao7, #meuBotao8, #meuBotao9, #meuBotao10{
-  color: white;
+  color: black;
   font-weight: bold;
-  background-color: rgba(132, 93, 169, 0.57);
+  background-color: #A3C9E2;
   border: none;
 }
 

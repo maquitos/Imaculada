@@ -1,7 +1,7 @@
 /* BODY */
 
 .body {
-  background-color: #010054b7;
+  background-color: #f2d7d591;
   color: white;
   font-size:20px;
   /* Ajuda com o rodapé */
@@ -48,7 +48,7 @@
 
 
 .navbar{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1B2A49;
 }
 
 
@@ -184,7 +184,7 @@
 
 
 .cor{
-  background-color: rgba(0, 0, 0, 0.5)!important;
+  background-color: #1B2A49;
 }
 
 
@@ -200,7 +200,7 @@
 
 
 .parteInferiorPag{
-  background: rgba(0, 0, 0, 0.5);
+  background: #1B2A49;
   margin-top: 15%;
 }
 
@@ -214,11 +214,12 @@
     width: 400px;
     min-width: 200px;
     max-width : 600px;
+    color: black;
 }
 
 
 .baixoNav{
-  background-color: #00000080;
+  background-color: #1B2A49;
   border-radius: 20px;
   height: 10px;
 }
@@ -235,7 +236,7 @@
 #meuBotao{
   color: white;
   font-weight: bold;
-  background-color: rgba(132, 93, 169, 0.57);
+  background-color: #1B2A49;
   border: none;
 }
 
@@ -258,7 +259,7 @@
 
 #resultado{
   
-  background-color: black;
+  background-color: white;
 }
 
 
