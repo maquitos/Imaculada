@@ -132,6 +132,13 @@
   border-radius: 15px;
 }
 
+.image2 {
+  width: 15%;   
+  height: 15%;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
 
 .padroeira {
   width:250px;   
@@ -204,6 +211,26 @@
   background-color: #00000080;
   border-radius: 20px;
   height: 10px;
+}
+
+
+@media (max-width: 600px) {
+
+  .image2{
+    width: 50%;
+    height: 50%;
+  }
+  
+}
+.img-fluid{
+  width: 80%;
+  height: auto;
+}
+
+
+.fundoPadres{
+  background-color: #00000080;
+  border-radius: 20px;
 }
 
 /* Ajuda com o rodapé */
