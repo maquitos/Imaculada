@@ -131,8 +131,15 @@
 
 
 .padroeira {
-  width:250px;   
-  height: 300px;   
+  width: 25%;   
+  height: 25%;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.fabiano {
+  width: 50%;   
+  height: 50%;   
   margin-top: 20px;
   border-radius: 15px;
 }
@@ -207,6 +214,18 @@
   background-color: #00000080;
   border-radius: 20px;
   height: 10px;
+}
+
+@media (max-width: 600px) {
+  .padroeira{
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.fundoPadres{
+  background-color: #00000080;
+  border-radius: 20px;
 }
 
 /* Ajuda com o rodapé */
