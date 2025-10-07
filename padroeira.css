@@ -1,7 +1,7 @@
 /* BODY */
 
 .body {
-  background-color: #f2d7d591;
+  background-color: #a3c9e2c4;
   color: white;
   font-size:20px;
   /* Ajuda com o rodapé */
@@ -206,6 +206,30 @@
   border-radius: 20px;
   height: 10px;
 }
+
+
+.fundoPadres{
+  background-color: #1B2A49;
+  border-radius: 20px;
+}
+
+.img-fluid{
+  width: 20%;
+  height: auto;
+  margin: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .img-fluid{
+  width: 50%;
+  }
+  .site-main{
+    font-size: 16px;
+  }
+}
+
+
 
 /* Ajuda com o rodapé */
 
