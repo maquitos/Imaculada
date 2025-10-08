@@ -218,7 +218,9 @@
   height: auto;
   margin: 20px;
 }
-
+.conteudo{
+    margin: 30px;
+}
 
 @media (max-width: 600px) {
   .img-fluid{
@@ -226,6 +228,9 @@
   }
   .site-main{
     font-size: 16px;
+  }
+  .conteudo{
+    margin: 20px;
   }
 }
 
