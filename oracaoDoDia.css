@@ -262,6 +262,10 @@
   .paragrafo2{
     font-size: 20px;
   }
+
+  #tabelOra{
+    width: 90%;
+  }
 }
 
 
