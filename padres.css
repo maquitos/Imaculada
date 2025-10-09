@@ -138,8 +138,8 @@
 }
 
 .fabiano {
-  width: 50%;   
-  height: 50%;   
+  width: 90%;   
+  height: auto;   
   margin-top: 20px;
   border-radius: 15px;
 }
@@ -216,18 +216,20 @@
   height: 10px;
 }
 
-@media (max-width: 600px) {
-  .padroeira{
-    width: 50%;
-    height: 50%;
+#taman{
+    width: 60%;
   }
-}
 
-.fundoPadres{
-  background-color: #1B2A49;
-  border-radius: 20px;
-}
+#taman2{
+    width: 50%;
+  }
 
+  .fundoPadres{
+    background-color: #1B2A49;
+    border-radius: 20px;
+  }
+
+  
 /* Ajuda com o rodapé */
 
 .footer {
@@ -238,3 +240,24 @@
 .site-main {
   flex: 1;
 }
+
+
+
+/* Melhorando para o mobile */
+
+@media (max-width: 600px) {
+
+  .padroeira{
+    width: 50%;
+    height: 50%;
+  }
+
+  #taman{
+    width: 80%;
+  }
+
+  #taman2{
+    width: 80%;
+  }
+}
+

@@ -227,6 +227,9 @@
   .conteudo{
     margin: 20px;
   }
+  .img-fluid{
+    width: 60%;
+  }
 
 }
 
