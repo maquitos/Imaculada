@@ -280,12 +280,21 @@
 }
 
 
+.teito{
+  color: #1B2A49;
+} 
+
+
 .ajudaLink{
   color: #ffffff;
   margin-right: 10px;
   text-decoration: none;
   font-size: 20px;
 }
+
+.conteudo{
+    margin: 40px;
+  }
 
 
 @media (max-width: 600px) {
