@@ -247,6 +247,19 @@
   transition: 0.3s;
 }
 
+.ajudaLink{
+  color: #ffffff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.separacao{
+  border: none;
+  border-top: 5px double #1B2A49;
+  margin: 60px 5%;
+}
+
 @media (max-width: 600px) {
   .btn-secondary {
     width: 340px;
