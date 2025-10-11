@@ -1,30 +1,71 @@
+// Mostra a data formatada em português
+const dataEl = document.getElementById("dataHoje");
+const hoje = new Date();
+dataEl.textContent = hoje.toLocaleDateString("pt-BR", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+});
 
-    const mensagens =["Oração é o canal que nos liga a Deus (Agostinho de Hipona)" , "A oração é a linguagem do Céu(São Carlo Acutis)","A oração é o alimento da alma(Padre Ibiapina", "e a graça,repito, vem pela oração(Frei Damião)","Quem reza, Deus ouve(Padre Cícero)"," Portanto, vós orareis assim: Pai nosso que estás nos céus, santificado seja o teu nome venha o teu reino, seja feita a tua vontade, assim na terra como no céu o pão nosso de cada dia nos dá hoje, perdoa-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores; e não nos induzas à tentação, mas livra-nos do mal(Jesus Cristo)",
-    "“Eu rogo por eles; não rogo pelo mundo, mas por aqueles que me deste, porque são teus(Jesus Cristo)","Mas Jesus retirava-se para lugares solitários e orava( Lucas 5:16)",
-    "Eu rogo também por aqueles que virão a crer em mim, por meio da palavra deles(Jesus Cristo)",
-    "Perdoo de coração aos meus inimigos e ofereço a Deus o sacrifício da minha vida(Dom Vital)",
- 'A oração não consiste apenas em pedir, mas também em inclinar a vontade para receber a graça(São Tomás de Aquino)'
-    ]
+// URLs das APIs
+const API_URLS = [
+  "https://liturgia.up.railway.app/v2/",
+  "https://api-liturgia-diaria.vercel.app/?date=" + hoje.toISOString().slice(0, 10)
+];
 
+const leitura1El = document.getElementById("leitura1");
+const salmoEl = document.getElementById("salmo");
+const evangelhoEl = document.getElementById("evangelho");
+const fonteEl = document.getElementById("fonte");
 
-const indice = Math.floor(Math.random() * mensagens.length);
-(mensagens[indice]);
-  function mostrarResposta(numero) {
-      // Esconde todos os cards
-      const cards = document.querySelectorAll("[id^='resposta']");
-      cards.forEach(card => {
-        card.classList.remove("mostrar");
-        card.classList.add("hidden");
-      });
+// Tenta buscar da API
+async function carregarLeituras() {
+  for (const url of API_URLS) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Erro HTTP " + res.status);
+      const data = await res.json();
+      console.log("Dados recebidos:", data);
 
-      // Mostra apenas o card clicado, com delay no efeito
-      const cardSelecionado = document.getElementById("resposta" + numero);
-      cardSelecionado.classList.remove("hidden");
+      // Pega os textos (varia dependendo da API)
+      const leitura1 = data.leitura1?.texto || data.leitura?.primeira || data.leituras?.[0]?.texto;
+      const salmo = data.salmo?.texto || data.salmo?.ref || data.salmo;
+      const evangelho = data.evangelho?.texto || data.leituras?.find(l => /evangelho/i.test(l.tipo))?.texto;
 
-      // Timeout necessário para o CSS transition funcionar
-      setTimeout(() => {
-        cardSelecionado.classList.add("mostrar");
-      }, 10);
+      if (leitura1 || salmo || evangelho) {
+        leitura1El.textContent = leitura1 || "Não disponível";
+        salmoEl.textContent = salmo || "Não disponível";
+        evangelhoEl.textContent = evangelho || "Não disponível";
+        fonteEl.textContent = "Fonte: " + url;
+        return; // sucesso → para aqui
+      }
+    } catch (err) {
+      console.warn("Erro ao carregar da API:", err.message);
     }
+  }
 
+  // Se nenhuma API funcionou, tenta o JSON local
+  try {
+    const local = await fetch("leituras.json");
+    const data = await local.json();
+    const hojeISO = new Date().toISOString().slice(0, 10);
+    const leitura = data[hojeISO];
+    if (leitura) {
+      leitura1El.textContent = leitura.primeiraLeitura;
+      salmoEl.textContent = leitura.salmo;
+      evangelhoEl.textContent = leitura.evangelho;
+      fonteEl.textContent = "Fonte: arquivo local (offline)";
+    } else {
+      throw new Error("Data não encontrada no JSON local");
+    }
+  } catch (err) {
+    leitura1El.textContent = "Não foi possível carregar as leituras.";
+    salmoEl.textContent = "";
+    evangelhoEl.textContent = "";
+    fonteEl.textContent = "Erro ao buscar leituras.";
+  }
+}
 
+// Executa ao abrir a página
+carregarLeituras();
