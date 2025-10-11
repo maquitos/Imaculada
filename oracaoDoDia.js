@@ -10,14 +10,19 @@ dataEl.textContent = hoje.toLocaleDateString("pt-BR", {
 
 // URLs das APIs
 const API_URLS = [
-  "https://liturgia.up.railway.app/v2/",
-  "https://api-liturgia-diaria.vercel.app/?date=" + hoje.toISOString().slice(0, 10)
+  "https://liturgia.up.railway.app/v2/"
 ];
 
 const leitura1El = document.getElementById("leitura1");
 const salmoEl = document.getElementById("salmo");
 const evangelhoEl = document.getElementById("evangelho");
 const fonteEl = document.getElementById("fonte");
+
+// Função para colocar números em <strong> e adicionar espaço depois
+function formatarNumerosComEspacoENegrito(texto) {
+  if (!texto) return "";
+  return texto.replace(/(\d+)(?!\s)/g, '<strong>$1</strong> ');
+}
 
 // Tenta buscar da API
 async function carregarLeituras() {
@@ -29,14 +34,14 @@ async function carregarLeituras() {
       console.log("Dados recebidos:", data);
 
       // Pega os textos (varia dependendo da API)
-      const leitura1 = data.leitura1?.texto || data.leitura?.primeira || data.leituras?.[0]?.texto;
-      const salmo = data.salmo?.texto || data.salmo?.ref || data.salmo;
-      const evangelho = data.evangelho?.texto || data.leituras?.find(l => /evangelho/i.test(l.tipo))?.texto;
+      const leitura1 = data.leituras?.primeiraLeitura?.[0]?.texto;
+      const salmo = data.leituras?.salmo?.[0]?.texto;
+      const evangelho = data.leituras?.evangelho?.[0]?.texto;
 
       if (leitura1 || salmo || evangelho) {
-        leitura1El.textContent = leitura1 || "Não disponível";
-        salmoEl.textContent = salmo || "Não disponível";
-        evangelhoEl.textContent = evangelho || "Não disponível";
+        leitura1El.innerHTML = leitura1 ? formatarNumerosComEspacoENegrito(leitura1) : "Não disponível";
+        salmoEl.innerHTML = salmo ? formatarNumerosComEspacoENegrito(salmo) : "Não disponível";
+        evangelhoEl.innerHTML = evangelho ? formatarNumerosComEspacoENegrito(evangelho) : "Não disponível";
         fonteEl.textContent = "Fonte: " + url;
         return; // sucesso → para aqui
       }
@@ -52,9 +57,9 @@ async function carregarLeituras() {
     const hojeISO = new Date().toISOString().slice(0, 10);
     const leitura = data[hojeISO];
     if (leitura) {
-      leitura1El.textContent = leitura.primeiraLeitura;
-      salmoEl.textContent = leitura.salmo;
-      evangelhoEl.textContent = leitura.evangelho;
+      leitura1El.innerHTML = leitura.primeiraLeitura;
+      salmoEl.innerHTML = leitura.salmo;
+      evangelhoEl.innerHTML = leitura.evangelho;
       fonteEl.textContent = "Fonte: arquivo local (offline)";
     } else {
       throw new Error("Data não encontrada no JSON local");
