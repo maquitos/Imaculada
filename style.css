@@ -16,7 +16,7 @@
 
 
 .body {
-  background-color: #a3c9e2c4;
+  background-color: #89b6d6;
   color: white;
   font-size:20px;
   /* Ajuda com o rodapé */
@@ -295,6 +295,32 @@
 .conteudo{
     margin: 40px;
   }
+
+.doacao{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9b2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.butaDoacao{
+  background-color: #1B2A49;
+  font-weight: bold;
+  color: white;
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+.butaDoacao:hover{
+  background-color: #1b2a49e0;
+}
 
 
 @media (max-width: 600px) {
