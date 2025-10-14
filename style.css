@@ -297,7 +297,8 @@
   }
 
 .doacao{
-  width: 60%;
+  width: 40%;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -319,8 +320,12 @@
 }
 
 .butaDoacao:hover{
-  background-color: #1b2a49e0;
+  border: none;
+  width: 250px;
+  height: 150px;
+  background-color: #1b2a49ee;
 }
+
 
 
 @media (max-width: 600px) {
