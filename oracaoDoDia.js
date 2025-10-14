@@ -13,10 +13,17 @@ const API_URLS = [
   "https://liturgia.up.railway.app/v2/"
 ];
 
+// Pega todos os elementos
+const refLeitura1El = document.getElementById("refLeitura1");
+const refSegundaLeituraEl = document.getElementById("refSegundaLeitura");
+const refSalmoEl = document.getElementById("refSalmo");
+const refEvangelhoEl = document.getElementById("refEvangelho");
 const leitura1El = document.getElementById("leitura1");
+const segundaLeituraEl = document.getElementById("segundaLeitura");
 const salmoEl = document.getElementById("salmo");
 const evangelhoEl = document.getElementById("evangelho");
 const fonteEl = document.getElementById("fonte");
+const tituloSegundaLeitura = document.getElementById("tituloSegundaLeitura");
 
 // Função para colocar números em <strong> e adicionar espaço depois
 function formatarNumerosComEspacoENegrito(texto) {
@@ -24,7 +31,7 @@ function formatarNumerosComEspacoENegrito(texto) {
   return texto.replace(/(\d+)(?!\s)/g, '<strong>$1</strong> ');
 }
 
-// Tenta buscar da API
+// Função principal
 async function carregarLeituras() {
   for (const url of API_URLS) {
     try {
@@ -33,15 +40,42 @@ async function carregarLeituras() {
       const data = await res.json();
       console.log("Dados recebidos:", data);
 
-      // Pega os textos (varia dependendo da API)
+      // Pega os textos (de acordo com o formato da API)
+      const refLeitura1 = data.leituras?.primeiraLeitura?.[0]?.referencia;
       const leitura1 = data.leituras?.primeiraLeitura?.[0]?.texto;
+
+      const refSegundaLeitura = data.leituras?.segundaLeitura?.[0]?.referencia;
+      const segundaLeitura = data.leituras?.segundaLeitura?.[0]?.texto;
+
+      const refSalmo = data.leituras?.salmo?.[0]?.referencia;
       const salmo = data.leituras?.salmo?.[0]?.texto;
+
+      const refEvangelho = data.leituras?.evangelho?.[0]?.referencia;
       const evangelho = data.leituras?.evangelho?.[0]?.texto;
 
       if (leitura1 || salmo || evangelho) {
+        // Primeira leitura
+        refLeitura1El.innerHTML = refLeitura1 ? (refLeitura1) : "Não disponível";
         leitura1El.innerHTML = leitura1 ? formatarNumerosComEspacoENegrito(leitura1) : "Não disponível";
+
+        // Segunda leitura (só mostra se existir)
+        if (segundaLeitura) {
+          tituloSegundaLeitura.style.display = "block";
+          refSegundaLeituraEl.style.display = "block";
+          segundaLeituraEl.style.display = "block";
+
+          refSegundaLeituraEl.innerHTML = refSegundaLeitura ? (refSegundaLeitura) : "Não disponível";
+          segundaLeituraEl.innerHTML = formatarNumerosComEspacoENegrito(segundaLeitura);
+        }
+
+        // Salmo
+        refSalmoEl.innerHTML = refSalmo ? (refSalmo) : "Não disponível";
         salmoEl.innerHTML = salmo ? formatarNumerosComEspacoENegrito(salmo) : "Não disponível";
+
+        // Evangelho
+        refEvangelhoEl.innerHTML = refEvangelho ? (refEvangelho) : "Não disponível";
         evangelhoEl.innerHTML = evangelho ? formatarNumerosComEspacoENegrito(evangelho) : "Não disponível";
+
         fonteEl.textContent = "Fonte: " + url;
         return; // sucesso → para aqui
       }
@@ -57,9 +91,22 @@ async function carregarLeituras() {
     const hojeISO = new Date().toISOString().slice(0, 10);
     const leitura = data[hojeISO];
     if (leitura) {
-      leitura1El.innerHTML = leitura.primeiraLeitura;
-      salmoEl.innerHTML = leitura.salmo;
-      evangelhoEl.innerHTML = leitura.evangelho;
+      refLeitura1El.textContent = leitura.refLeitura1 || "";
+      leitura1El.innerHTML = leitura.primeiraLeitura || "";
+
+      // Segunda leitura se existir
+      if (leitura.segundaLeitura) {
+        tituloSegundaLeitura.style.display = "block";
+        refSegundaLeituraEl.style.display = "block";
+        segundaLeituraEl.style.display = "block";
+        refSegundaLeituraEl.textContent = leitura.refSegundaLeitura || "";
+        segundaLeituraEl.innerHTML = leitura.segundaLeitura || "";
+      }
+
+      refSalmoEl.textContent = leitura.refSalmo || "";
+      salmoEl.innerHTML = leitura.salmo || "";
+      refEvangelhoEl.textContent = leitura.refEvangelho || "";
+      evangelhoEl.innerHTML = leitura.evangelho || "";
       fonteEl.textContent = "Fonte: arquivo local (offline)";
     } else {
       throw new Error("Data não encontrada no JSON local");
