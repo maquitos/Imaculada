@@ -18,23 +18,22 @@
 <body class="body">
   <nav class="navbar navbar-expand-lg navbar-dark cor">
     <div class="container-fluid">
-      <!-- Logo -->
+   
       <a href="index.html" class="d-flex align-items-center">
         <img src="Imaculada-removebg-preview.png" alt="Descrição da imagem" class="image">
       </a>  
 
-      <!-- Marca -->
       <a class="navbar-brand botao d-none d-lg-inline fonte" href="#">
         Paróquia Imaculada Conceição
       </a>  
 
-      <!-- Botão hamburguer -->
+     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" 
         aria-controls="menuNav" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menu -->
+     
       <div class="collapse navbar-collapse" id="menuNav">
         <br><br><br><br>
         <ul class="navbar-nav ms-auto controle" id="tetão">
@@ -59,53 +58,70 @@
     <div class="teste2">
       <img src="png-clipart-the-bible-the-old-and-new-testaments-king-james-version-new-life-version-amplified-bible-holy-bible-cross-objects-removebg-preview.png" alt="Descrição da imagem" class="biblia"> 
     </div>
-    <div class="teste">
-      <ul class="oracao caixa"id="" style="width: 90%;">
+    <div class="teste ">
+      <ul class="oracao caixa "id="" style="width: 90%;">
         <br><br>
-        <div class="mb-4">
-              <h5>1. Onde Moisés recebeu as tábuas da lei?</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" value="Monte Sinai">
-                <label class="form-check-label">Monte Sinai</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" value="Paris">
-                <label class="form-check-label">Monte Fugi</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" value="Roma">
-                <label class="form-check-label">Chicago Bulls</label>
-              </div>
+        <div class="container ">
+        <div class=" cor ">
+            
+            <div id="start-screen" class="text-center cor">
+                <h1 class="mb-4 cor  text-white">Quiz da Bíblia</h1>
+                <p class="mb-4 cor  text-white">Teste seus conhecimentos acerca das Sagradas Escrituras!!</p>
+                <button class="btn btn-primary  text-white" onclick="iniciarQuiz()">Começar Jogo</button>
             </div>
 
-            <!-- Pergunta 2 -->
-            <div class="mb-4">
-              <h5>2. Qual foi o primeiro discípulo a reconhecer Jesus como o filho de Deus?</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" value="3">
-                <label class="form-check-label">Pedro</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" value="4">
-                <label class="form-check-label">Tomé</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" value="Natanael">
-                <label class="form-check-label">Natanael</label>
-              </div>
+            <div id="game-screen" class="hide">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="badge bg-secondary text-white">Pergunta <span id="q-index">1</span></span>
+                    <span class="badge bg-success">Pontos: <span id="score">0</span></span>
+                </div>
+                
+                <h4 id="question-text" class="mb-4 text-white font-weight:-100px">A pergunta aparecerá aqui</h4>
+                
+                <div id="options-container" class="d-grid gap-2 text-white ">
+                    </div>
+
+                <div id="feedback-msg" class="mt-3 fw-bold text-center text-white"></div>
+
+                <button id="next-btn" class="btn btn-dark w-100 mt-3 hide text-white" onclick="proximaPergunta()">Próxima Pergunta ➡️</button>
             </div>
 
-            <!-- Botão -->
-            <div class="text-center">
-              <button class="btn btn-secondary" onclick="verificarRespostas()" id="meuBotao">Enviar Respostas</button>
+            <div id="result-screen" class="hide text-center">
+              <br>
+
+                <div class="display-1 mb-3">🏆</div>
+                <h4 class="text-white" >Sua classificação: <span id="final-score">0</span></h4>
+
+                <br><br><br>
+
+                 <h4 class="text-white" >Todos os Níveis: <span id="final-score"></span></h4>
+                 <br>
+                  <h4 class="text-white" >5 pontos = Católico de Festa 🎄🐰 <span id="final-score"></span></h4>
+                   <h4 class="text-white" >10 pontos = Coroinha 🔔🍇 <span id="final-score"></span></h4>
+                    <h4 class="text-white" >15 pontos = Pescador de Almas 🎣🐟 <span id="final-score"></span></h4>
+                    <h4 class="text-white" >20 pontos = Leitor na Missa 📢💬 <span id="final-score"></span></h4>
+                     <h4 class="text-white" >25 pontos = Ministro de Música 🎸🎤 <span id="final-score"></span></h4>
+                     <h4 class="text-white" >30 pontos = Catequista 👨🏼‍🦳 ✝️ <span id="final-score"></span></h4>
+                     <h4 class="text-white" >40 pontos = Teólogo 🤓📚  <span id="final-score"></span></h4>
+                      <h4 class="text-white" >50 pontos = Padre 🕶️📜  <span id="final-score"></span></h4>
+                      <h4 class="text-white" >80 pontos = Cardeal 🛐🍞  <span id="final-score"></span></h4>
+                      <h4 class="text-white" >100 pontos = Papa 👑  <span id="final-score"></span></h4>
+                  <br><br>
+                  <br><br>
+                  <br><br>
+      
             </div>
 
-            <!-- Resultado -->
-            <div id="resultado" class="alert alert-info mt-4 d-none text-center"></div>
-          </div>
         </div>
-      </div>
+        
     </div>
+    
+    <br> 
+    
+
+    
+
+
   </main>
 
 
@@ -115,14 +131,14 @@
   <footer class="text-center" style="background-color: #1B2A49; color: #ffffff; padding: 40px 0;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 20px;">
 
-      <!-- Contato -->
+     
       <div style="flex: 1 1 300px; margin-bottom: 20px;">
         <h3>Contato</h3>
         <p><strong>Telefone:</strong> (83) 9 9844-1169</p>
         <p><strong>Email:</strong> fabiana.nunesf@hotmail.com</p>
       </div>
 
-      <!-- Redes Sociais -->
+  
       <div style="flex: 1 1 200px; margin-bottom: 20px;">
         <h3>Redes Sociais</h3>
         <p>Siga-nos nas redes:</p>
@@ -139,14 +155,14 @@
         </p>
       </div>
 
-      <!-- Localização -->
+      
       <div style="flex: 1 1 300px; margin-bottom: 20px;">
         <h3>Localização</h3>
         <p>Rua Osvaldo Cruz, 115 - Assis Chateaubriand<br>Guarabira - PB<br>CEP: 58200-000</p>
       </div>
     </div>
 
-    <!-- Créditos -->
+
     <div style="text-align: center; padding-top: 20px; border-top: 1px solid #ffffff33;">
       <p>&copy; 2025 Paroquia Imaculada Conceição - Todos os direitos reservados</p>
     </div>

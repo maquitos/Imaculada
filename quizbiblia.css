@@ -286,3 +286,44 @@
 .site-main {
   flex: 1;
 }
+.cor{
+  background-color: #14213D;
+ border-radius: 20px;
+}
+.quiz-card{
+  background-color: #14213D;
+}
+.card{
+  background-color: #14213D;
+}
+
+
+/* Quando passar o mouse */
+.btn-option:hover {
+    background-color: white;
+    color: #1A2332; /* A cor do fundo escuro, para dar contraste */
+}
+/* Isso força a cor branca nas opções */
+.btn-option {
+    /* Texto branco */
+    color: #ffffff !important; 
+    
+    
+    /* Borda branca */
+    border-color: #ffffff !important; 
+    
+    /* Fundo transparente para ver o azul do cartão */
+    background-color: transparent !important; 
+    
+    /* Deixar um pouco mais grosso para ler melhor */
+    font-weight: 500; 
+}
+
+/* --- EFEITO AO PASSAR O MOUSE (HOVER) --- */
+.btn-option:hover {
+    /* Fundo vira branco */
+    background-color: #ffffff !important; 
+    
+    /* Texto vira preto (ou azul escuro) para dar leitura */
+    color: #1A2332 !important; 
+}
