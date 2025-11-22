@@ -327,3 +327,6 @@
     /* Texto vira preto (ou azul escuro) para dar leitura */
     color: #1A2332 !important; 
 }
+.esconder{
+  display: none;;
+}
