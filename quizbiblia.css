@@ -204,6 +204,47 @@
   margin-top: 15%;
 }
 
+.caixaPerg{
+  width: 60%;
+}
+
+.butaDoacao{
+  background-color: #dbdbdbab;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+.butaProx{
+  background-color: #dbdbdbab;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+.butaProx:hover{
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.butaDoacao:hover{
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.opG{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 
 .hidden {
   display: none;
@@ -211,7 +252,7 @@
 
 
 .caixa{
-    width: 400px;
+    width: 90%;
     min-width: 200px;
     max-width : 600px;
     color: black;
@@ -268,6 +309,16 @@
   .paragrafo2{
     font-size: 20px;
   }
+
+  .caixaPerg{
+    width: 90%;
+  }
+
+  #question-text{
+    font-size: 20px;
+    margin: 20px;
+  }
+
 }
 
 #resultado{
@@ -326,4 +377,7 @@
     
     /* Texto vira preto (ou azul escuro) para dar leitura */
     color: #1A2332 !important; 
+}
+.esconder{
+  display: none;;
 }

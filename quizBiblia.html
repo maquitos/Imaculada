@@ -16,7 +16,7 @@
 
 </head>
 <body class="body">
-  <nav class="navbar navbar-expand-lg navbar-dark cor">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
    
       <a href="index.html" class="d-flex align-items-center">
@@ -55,62 +55,83 @@
       <h2 class="paragrafo2">O quanto você sabe da bíblia?</h2>
     </div>
 
-    <div class="teste2">
+    <br>
+
+    <div class="teste">
       <img src="png-clipart-the-bible-the-old-and-new-testaments-king-james-version-new-life-version-amplified-bible-holy-bible-cross-objects-removebg-preview.png" alt="Descrição da imagem" class="biblia"> 
     </div>
-    <div class="teste ">
-      <ul class="oracao caixa "id="" style="width: 90%;">
+
+    <br>
+
+    <div class="teste">
         <br><br>
-        <div class="container ">
-        <div class=" cor ">
-            
+        <div class="cor caixaPerg">
+          <div>
             <div id="start-screen" class="text-center cor">
-                <h1 class="mb-4 cor  text-white">Quiz da Bíblia</h1>
-                <p class="mb-4 cor  text-white">Teste seus conhecimentos acerca das Sagradas Escrituras!!</p>
-                <button class="btn btn-primary  text-white" onclick="iniciarQuiz()">Começar Jogo</button>
+              <br><br>
+                <h1 class="text-white">Quiz da Bíblia</h1>
+                <br>
+                <p class="text-white">Teste seus conhecimentos acerca das Sagradas Escrituras!!</p>
+                <p class="text-white">(Se você não quiser arriscar, pode clicar em próxima pergunta)</p>
+                <hr class="separacao">
+                <button class="butaDoacao" onclick="iniciarQuiz()">Começar Jogo</button>
             </div>
 
-            <div id="game-screen" class="hide">
+            <hr class="separacao">
+
+            <div id="game-screen" class="text-center">
+
                 <div class="d-flex justify-content-between mb-3">
-                    <span class="badge bg-secondary text-white">Pergunta <span id="q-index">1</span></span>
-                    <span class="badge bg-success">Pontos: <span id="score">0</span></span>
+                    <span class="badge bg-secondary" style="margin: 20px;">Pergunta <span id="q-index">1</span></span>
+                    <span class="badge bg-success" style="margin: 20px;">Pontos: <span id="score">0</span></span>
                 </div>
                 
-                <h4 id="question-text" class="mb-4 text-white font-weight:-100px">A pergunta aparecerá aqui</h4>
+                <h4 id="question-text" class="text-white">A pergunta aparecerá aqui</h4>
+
+                <br>
                 
-                <div id="options-container" class="d-grid gap-2 text-white ">
-                    </div>
+                <div id="options-container" class="text-white opG"></div>
 
-                <div id="feedback-msg" class="mt-3 fw-bold text-center text-white"></div>
-
-                <button id="next-btn" class="btn btn-dark w-100 mt-3 hide text-white" onclick="proximaPergunta()">Próxima Pergunta ➡️</button>
+                <div id="feedback-msg" class="text-white opG"></div>
+  
             </div>
+
+            <br><br>
+
+            <div class="text-center">
+              <button id="next-btn" class="butaProx" onclick="proximaPergunta()">Próxima Pergunta ➡️</button>
+            </div>
+
+            <hr class="separacao">
 
             <div id="result-screen" class="hide text-center">
-              <br>
+              <div>  
+                <br>
 
                 <div class="display-1 mb-3">🏆</div>
-                <h4 class="text-white" >Sua classificação: <span id="final-score">0</span></h4>
 
-                <br><br><br>
+                <h4 class="text-white" >Sua classificação: <span id="titulo"></span></h4>
 
-                 <h4 class="text-white" >Todos os Níveis: <span id="final-score"></span></h4>
+                <br><br>
+
                  <br>
-                  <h4 class="text-white" >5 pontos = Católico de Festa 🎄🐰 <span id="final-score"></span></h4>
-                   <h4 class="text-white" >10 pontos = Coroinha 🔔🍇 <span id="final-score"></span></h4>
-                    <h4 class="text-white" >15 pontos = Pescador de Almas 🎣🐟 <span id="final-score"></span></h4>
-                    <h4 class="text-white" >20 pontos = Leitor na Missa 📢💬 <span id="final-score"></span></h4>
-                     <h4 class="text-white" >25 pontos = Ministro de Música 🎸🎤 <span id="final-score"></span></h4>
-                     <h4 class="text-white" >30 pontos = Catequista 👨🏼‍🦳 ✝️ <span id="final-score"></span></h4>
-                     <h4 class="text-white" >40 pontos = Teólogo 🤓📚  <span id="final-score"></span></h4>
-                      <h4 class="text-white" >50 pontos = Padre 🕶️📜  <span id="final-score"></span></h4>
-                      <h4 class="text-white" >80 pontos = Cardeal 🛐🍞  <span id="final-score"></span></h4>
-                      <h4 class="text-white" >100 pontos = Papa 👑  <span id="final-score"></span></h4>
-                  <br><br>
-                  <br><br>
-                  <br><br>
-      
+                  <h4 class="text-white" >5 pontos = Leigo 🎄🐰 <span class="esconder "id="final-score"></span></h4>
+                  <h4 class="text-white" >10 pontos = Coroinha 🔔🍇 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >15 pontos = Pescador de Almas 🎣🐟 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >20 pontos = Leitor na Missa 📢💬 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >25 pontos = Ministro de Música 🎸🎤 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >30 pontos = Catequista 👨🏼‍🦳 ✝️ <span id="final-score"></span></h4>
+                  <h4 class="text-white" >40 pontos = Teólogo 🤓📚  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >50 pontos = Padre 🕶️📜  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >80 pontos = Cardeal 🛐🍞  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >100 pontos = Papa 👑  <span id="final-score"></span></h4>
+
+                  <hr class="separacao">
+              </div>
+
             </div>
+
+          </div>
 
         </div>
         
