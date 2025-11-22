@@ -630,6 +630,66 @@ const bancoDePerguntas = [
         "opcoes": ["Jardim das Oliveiras", "Getsêmani", "Jardim Suspenso", "Éden"],
         "resposta": 3
     }
+   , {
+        "pergunta": "Quem foi o arcanjo que acompanhou Tobias em sua viagem?",
+        "referencia": "Tobias 5:4",
+        "opcoes": ["Miguel", "Gabriel", "Uriel", "Rafael"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Qual viúva corajosa cortou a cabeça do general Holofernes para salvar seu povo?",
+        "referencia": "Judite 13:8",
+        "opcoes": ["Ester", "Dalila", "Judite", "Rute"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Em 2 Macabeus, o que Judas mandou fazer pelos soldados mortos (base do Purgatório)?",
+        "referencia": "2 Macabeus 12:46",
+        "opcoes": ["Construir um monumento", "Jejuar por 7 dias", "Rezar pelos mortos", "Queimar suas roupas"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Segundo o livro de Eclesiástico (Sirácida), o que é um amigo fiel?",
+        "referencia": "Eclesiástico 6:16",
+        "opcoes": ["Uma fortuna", "Um escudo forte", "Um remédio de vida", "Uma perda de tempo"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Quem foi o secretário do profeta Jeremias que também tem um livro na Bíblia?",
+        "referencia": "Baruc 1:1",
+        "opcoes": ["Ezequiel", "Isaías", "Baruc", "Daniel"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual livro diz: 'As almas dos justos estão na mão de Deus'?",
+        "referencia": "Sabedoria 3:1",
+        "opcoes": ["Eclesiastes", "Provérbios", "Salmos", "Sabedoria"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Quem foi o líder judeu apelidado de 'Macabeu' (O Martelo)?",
+        "referencia": "1 Macabeus 3",
+        "opcoes": ["Simão", "Jônatas", "Judas", "Eleazar"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "O que Daniel usou para provar que os sacerdotes comiam a comida do ídolo Bel?",
+        "referencia": "Daniel 14:14",
+        "opcoes": ["Câmeras escondidas", "Trancou a porta", "Vigilância noturna", "Cinzas no chão"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "No livro de Daniel (cap. 13), qual mulher foi salva de uma acusação falsa de adultério?",
+        "referencia": "Daniel 13",
+        "opcoes": ["Bate-Seba", "Maria Madalena", "Susana", "Isabel"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "O que Tobias usou para curar a cegueira de seu pai?",
+        "referencia": "Tobias 11:11",
+        "opcoes": ["Barro", "Água do rio", "Azeite", "O fel do peixe"],
+        "resposta": 3
+    }
 ];
 
 // ======================================================
