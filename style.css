@@ -326,6 +326,13 @@
   background-color: #1b2a49ee;
 }
 
+.fonte {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
 
 
 @media (max-width: 600px) {
