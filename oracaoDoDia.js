@@ -1,123 +1,78 @@
-// Mostra a data formatada em português
-const dataEl = document.getElementById("dataHoje");
-const hoje = new Date();
-dataEl.textContent = hoje.toLocaleDateString("pt-BR", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric"
+// Mostrar data por extenso
+document.getElementById("dataHoje").textContent =
+  new Date().toLocaleDateString("pt-BR", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
 });
 
-// URLs das APIs
-const API_URLS = [
-  "https://liturgia.up.railway.app/v2/"
-];
-
-// Pega todos os elementos
+// Seletores
 const refLeitura1El = document.getElementById("refLeitura1");
-const refSegundaLeituraEl = document.getElementById("refSegundaLeitura");
-const refSalmoEl = document.getElementById("refSalmo");
-const refEvangelhoEl = document.getElementById("refEvangelho");
 const leitura1El = document.getElementById("leitura1");
-const segundaLeituraEl = document.getElementById("segundaLeitura");
-const salmoEl = document.getElementById("salmo");
-const evangelhoEl = document.getElementById("evangelho");
-const fonteEl = document.getElementById("fonte");
-const tituloSegundaLeitura = document.getElementById("tituloSegundaLeitura");
 
-// Função para colocar números em <strong> e adicionar espaço depois
-function formatarNumerosComEspacoENegrito(texto) {
-  if (!texto) return "";
-  return texto.replace(/(\d+)(?!\s)/g, '<strong>$1</strong> ');
+const tituloSegundaLeitura = document.getElementById("tituloSegundaLeitura");
+const refSegundaLeituraEl = document.getElementById("refSegundaLeitura");
+const segundaLeituraEl = document.getElementById("segundaLeitura");
+
+const refSalmoEl = document.getElementById("refSalmo");
+const salmoEl = document.getElementById("salmo");
+
+const refEvangelhoEl = document.getElementById("refEvangelho");
+const evangelhoEl = document.getElementById("evangelho");
+
+const fonteEl = document.getElementById("fonte");
+
+// Função para deixar números em negrito
+function formatarTexto(txt) {
+  if (!txt) return "";
+  return txt.replace(/(\d+)(?!\s)/g, "<strong>$1</strong> ");
 }
 
-// Função principal
+// Carrega a liturgia
 async function carregarLeituras() {
-  for (const url of API_URLS) {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("Erro HTTP " + res.status);
-      const data = await res.json();
-      console.log("Dados recebidos:", data);
-
-      // Pega os textos (de acordo com o formato da API)
-      const refLeitura1 = data.leituras?.primeiraLeitura?.[0]?.referencia;
-      const leitura1 = data.leituras?.primeiraLeitura?.[0]?.texto;
-
-      const refSegundaLeitura = data.leituras?.segundaLeitura?.[0]?.referencia;
-      const segundaLeitura = data.leituras?.segundaLeitura?.[0]?.texto;
-
-      const refSalmo = data.leituras?.salmo?.[0]?.referencia;
-      const salmo = data.leituras?.salmo?.[0]?.texto;
-
-      const refEvangelho = data.leituras?.evangelho?.[0]?.referencia;
-      const evangelho = data.leituras?.evangelho?.[0]?.texto;
-
-      if (leitura1 || salmo || evangelho) {
-        // Primeira leitura
-        refLeitura1El.innerHTML = refLeitura1 ? (refLeitura1) : "Não disponível";
-        leitura1El.innerHTML = leitura1 ? formatarNumerosComEspacoENegrito(leitura1) : "Não disponível";
-
-        // Segunda leitura (só mostra se existir)
-        if (segundaLeitura) {
-          tituloSegundaLeitura.style.display = "block";
-          refSegundaLeituraEl.style.display = "block";
-          segundaLeituraEl.style.display = "block";
-
-          refSegundaLeituraEl.innerHTML = refSegundaLeitura ? (refSegundaLeitura) : "Não disponível";
-          segundaLeituraEl.innerHTML = formatarNumerosComEspacoENegrito(segundaLeitura);
-        }
-
-        // Salmo
-        refSalmoEl.innerHTML = refSalmo ? (refSalmo) : "Não disponível";
-        salmoEl.innerHTML = salmo ? formatarNumerosComEspacoENegrito(salmo) : "Não disponível";
-
-        // Evangelho
-        refEvangelhoEl.innerHTML = refEvangelho ? (refEvangelho) : "Não disponível";
-        evangelhoEl.innerHTML = evangelho ? formatarNumerosComEspacoENegrito(evangelho) : "Não disponível";
-
-        fonteEl.textContent = "Fonte: " + url;
-        return; // sucesso → para aqui
-      }
-    } catch (err) {
-      console.warn("Erro ao carregar da API:", err.message);
-    }
-  }
-
-  // Se nenhuma API funcionou, tenta o JSON local
   try {
-    const local = await fetch("leituras.json");
-    const data = await local.json();
-    const hojeISO = new Date().toISOString().slice(0, 10);
-    const leitura = data[hojeISO];
-    if (leitura) {
-      refLeitura1El.textContent = leitura.refLeitura1 || "";
-      leitura1El.innerHTML = leitura.primeiraLeitura || "";
+    const res = await fetch("https://liturgia.up.railway.app/v2/");
+    const data = await res.json();
 
-      // Segunda leitura se existir
-      if (leitura.segundaLeitura) {
-        tituloSegundaLeitura.style.display = "block";
-        refSegundaLeituraEl.style.display = "block";
-        segundaLeituraEl.style.display = "block";
-        refSegundaLeituraEl.textContent = leitura.refSegundaLeitura || "";
-        segundaLeituraEl.innerHTML = leitura.segundaLeitura || "";
-      }
+    console.log("Recebido:", data);
 
-      refSalmoEl.textContent = leitura.refSalmo || "";
-      salmoEl.innerHTML = leitura.salmo || "";
-      refEvangelhoEl.textContent = leitura.refEvangelho || "";
-      evangelhoEl.innerHTML = leitura.evangelho || "";
-      fonteEl.textContent = "Fonte: arquivo local (offline)";
+    const L = data.leituras || {};
+
+    // Primeira leitura
+    refLeitura1El.innerHTML = L.primeiraLeitura?.[0]?.referencia || "—";
+    leitura1El.innerHTML = formatarTexto(L.primeiraLeitura?.[0]?.texto) || "—";
+
+    // Segunda leitura (opcional — domingo)
+    if (L.segundaLeitura?.length > 0) {
+      tituloSegundaLeitura.style.display = "block";
+      refSegundaLeituraEl.style.display = "block";
+      segundaLeituraEl.style.display = "block";
+
+      refSegundaLeituraEl.innerHTML = L.segundaLeitura?.[0]?.referencia || "—";
+      segundaLeituraEl.innerHTML = formatarTexto(L.segundaLeitura?.[0]?.texto) || "—";
     } else {
-      throw new Error("Data não encontrada no JSON local");
+      // Ocultar quando não houver
+      tituloSegundaLeitura.style.display = "none";
+      refSegundaLeituraEl.style.display = "none";
+      segundaLeituraEl.style.display = "none";
     }
-  } catch (err) {
+
+    // Salmo
+    refSalmoEl.innerHTML = L.salmo?.[0]?.referencia || "—";
+    salmoEl.innerHTML = formatarTexto(L.salmo?.[0]?.texto) || "—";
+
+    // Evangelho
+    refEvangelhoEl.innerHTML = L.evangelho?.[0]?.referencia || "—";
+    evangelhoEl.innerHTML = formatarTexto(L.evangelho?.[0]?.texto) || "—";
+
+    fonteEl.textContent = "Fonte: liturgia.up.railway.app";
+
+  } catch (erro) {
+    console.error("Erro:", erro);
     leitura1El.textContent = "Não foi possível carregar as leituras.";
-    salmoEl.textContent = "";
-    evangelhoEl.textContent = "";
     fonteEl.textContent = "Erro ao buscar leituras.";
   }
 }
 
-// Executa ao abrir a página
 carregarLeituras();

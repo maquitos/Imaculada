@@ -347,6 +347,13 @@
     width: 60%;
   }
 
+  .butaDoacao:hover{
+    border: none;
+    width: 200px;
+    height: 130px;
+    background-color: #1b2a49ee;
+  }
+
   #programacao{
     font-size: 24px;
   }

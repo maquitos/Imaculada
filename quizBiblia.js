@@ -847,49 +847,61 @@ function calcularNivel(pontos, total) {
         titulo = "Leigo 🎄🐰";
         cor = "text-danger"; // Vermelho
         document.getElementById("titulo").innerText = titulo;
-    } else if (porcentagem <= 10 && porcentagem > 5) {
+    } 
+    
+    else if (porcentagem <= 10) {
+        
         titulo = "Coroinha 🔔🍇 ";
-
         cor = "text-warning"; // Amarelo
-         document.getElementById("titulo").innerText = titulo;
-    } else if (porcentagem <= 15 && porcentagem >10) {
-        titulo = "Pescador de Almas 🎣🐟";
-        cor = "text-info"; // Azul claro
-         document.getElementById("titulo").innerText = titulo;
-    } else if (porcentagem <= 20 && porcentagem > 15) {
-        titulo = "Leitor na Missa 📢💬";
-        cor = "text-primary"; // Azul escuro
-         document.getElementById("titulo").innerText = titulo;
-    }
-
-    else if (porcentagem <= 25 && porcentagem > 20) {
-        titulo = "Ministro de Música 🎸🎤 ";
-        cor = "text-warning"; // Amarelo
-         document.getElementById("titulo").innerText = titulo;
-    } else if (porcentagem <= 30  && porcentagem >25) {
-        titulo = "Catequista 👨🏼‍🦳✝️";
-        cor = "text-info"; // Azul claro
-         document.getElementById("titulo").innerText = titulo;
-    } else if (porcentagem <= 40 && porcentagem > 30) {
-        titulo = "Teólogo 🤓📚";
-        cor = "text-primary"; // Azul escuro
-         document.getElementById("titulo").innerText = titulo;
-    }
-
-      else if (porcentagem >= 50  && porcentagem < 80) {
-        titulo = "Padre 🕶️📜";
-        cor = "text-info"; // Azul claro
          document.getElementById("titulo").innerText = titulo;
     } 
-    else if (porcentagem >= 80 && porcentagem <=99) {
+    
+    else if (porcentagem <= 15) {
+        titulo = "Pescador de Almas 🎣🐟";
+        cor = "text-info"; // Azul claro
+        document.getElementById("titulo").innerText = titulo;
+    } 
+    
+    else if (porcentagem <= 20) {
+        titulo = "Leitor na Missa 📢💬";
+        cor = "text-primary"; // Azul escuro
+        document.getElementById("titulo").innerText = titulo;
+    }
+
+    else if (porcentagem <= 25) {
+        titulo = "Ministro de Música 🎸🎤 ";
+        cor = "text-warning"; // Amarelo
+        document.getElementById("titulo").innerText = titulo;
+    } 
+    
+    else if (porcentagem <= 30) {
+        titulo = "Catequista 👨🏼‍🦳✝️";
+        cor = "text-info"; // Azul claro
+        document.getElementById("titulo").innerText = titulo;
+    } 
+    
+    else if (porcentagem <= 40) {
+        titulo = "Teólogo 🤓📚";
+        cor = "text-primary"; // Azul escuro
+        document.getElementById("titulo").innerText = titulo;
+    }
+
+      else if (porcentagem <= 80) {
+        titulo = "Padre 🕶️📜";
+        cor = "text-info"; // Azul claro
+        document.getElementById("titulo").innerText = titulo;
+    } 
+    
+    else if (porcentagem < 100) {
         titulo = "Cardeal 🛐🍞";
         cor = "text-primary"; // Azul escuro
-         document.getElementById("titulo").innerText = titulo;
+        document.getElementById("titulo").innerText = titulo;
     }
-     else {
-        titulo = "100 pontos = Papa 👑";
+    
+    else {
+        titulo = "Papa 👑";
         cor = "text-success"; // Verde
-         document.getElementById("titulo").innerText = titulo;
+        document.getElementById("titulo").innerText = titulo;
     }
 
     return { titulo, cor };
