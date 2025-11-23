@@ -192,6 +192,13 @@
   position: fixed;
 }
 
+.fonte {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
 
 .fonte{
   font-family: 'Poppins', sans-serif;
@@ -338,16 +345,9 @@
   flex: 1;
 }
 .cor{
-  background-color: #14213D;
+  background-color: #14213D; /* Ou #1B2A49 para deixar uma versão mais clara do azul*/
  border-radius: 20px;
 }
-.quiz-card{
-  background-color: #14213D;
-}
-.card{
-  background-color: #14213D;
-}
-
 
 /* Quando passar o mouse */
 .btn-option:hover {
