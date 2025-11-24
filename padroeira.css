@@ -1,0 +1,293 @@
+/* BODY */
+
+.body {
+  background-color: #89b6d6;
+  color: white;
+  font-size:20px;
+  /* Ajuda com o rodapé */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: navy;
+  padding: 10px;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* centraliza logo e texto */
+  gap: 8px; /* espaço entre logo e nome */
+}
+
+
+.navbar-toggler {
+  margin-left: auto; /* empurra o hambúrguer pra direita */
+}
+
+
+.navbar .nav-link {
+  margin-top: 10px;
+  color: white ;
+  border-radius: 20px; 
+  transition: 0.2s ease;
+  transform: translateY(38%);
+}
+
+
+#tetão .nav-link:hover{
+ color:goldenrod
+}
+
+
+#navbarNav{
+  justify-content: center;
+}
+
+
+.navbar{
+  background-color: #1B2A49;
+}
+
+
+.navbar .nav-link2 {
+  padding: 0 !important; 
+}
+
+/* MENUS */
+
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: navy;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+}
+/* OUTROS BAGUI */
+
+.paragafo2{
+  font-size:200px;
+  margin-top: center;
+}
+
+
+.image {
+  width: 100px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+.padroeira {
+  width:250px;   
+  height: 300px;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+.imaculada{
+  height:100px;
+  width: 100px;
+}
+
+
+.teste{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.teste2{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.paragrafo1{
+  font-size: 15px;
+  font-family: Georgia;
+  text-align: center;
+ 
+}
+
+
+.botao{
+  pointer-events: none  !important; 
+  font-family: Great Vibes;
+  background-color: none !important;
+  color:white !important;
+  transform: translateY(29%) !important;
+  font: bold;
+  cursor: default !important; 
+}
+
+
+.controle{
+  transform: translateY(-20%) !important;
+}
+
+
+.cor{
+  background-color: #1B2A49;
+}
+
+
+.fixo{
+  position: fixed;
+}
+
+.fonte {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+
+.fonte{
+ font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+
+.parteInferiorPag{
+  background: #1B2A49;
+}
+
+
+.baixoNav{
+  background-color: #1B2A49;
+  border-radius: 20px;
+  height: 10px;
+}
+
+
+.fundoPadres{
+  background-color: #1B2A49;
+  border-radius: 20px;
+}
+
+.img-fluid{
+  width: 20%;
+  height: auto;
+  margin: 20px;
+}
+.conteudo{
+    margin: 30px;
+}
+
+.ajudaLink{
+  color: #ffffff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.separacao{
+  border: none;
+  border-top: 5px double #a3c9e2c4;
+  margin: 60px 5%;
+}
+
+.separacao2{
+  border: none;
+  border-top: 5px double #1B2A49;
+  margin: 60px 5%;
+}
+
+
+.desc1{
+  width: 70%;
+  height: auto;
+  margin: 20px;
+}
+
+.desc2{
+  width: 70%;
+  height: auto;
+  margin: 20px;
+}
+
+.desc3{
+  width: 80%;
+  height: auto;
+  margin: 20px;
+}
+
+@media (max-width: 600px) {
+  .img-fluid{
+  width: 50%;
+  }
+  .site-main{
+    font-size: 16px;
+  }
+  .conteudo{
+    margin: 20px;
+  }
+}
+
+
+
+/* Ajuda com o rodapé */
+
+.footer {
+  margin-top: auto;
+}
+
+
+.site-main {
+  flex: 1;
+}

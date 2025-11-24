@@ -1,0 +1,383 @@
+/* BODY */
+
+.body {
+  background-color: #89b6d6;
+  color: white;
+  font-size:20px;
+  /* Ajuda com o rodapé */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: navy;
+  padding: 10px;
+}
+
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.navbar .nav-link {
+  margin-top: 10px;
+  color: white ;
+  border-radius: 20px; 
+  transition: 0.2s ease;
+  transform: translateY(38%);
+}
+
+
+#tetão .nav-link:hover{
+ color:goldenrod
+}
+
+
+#navbarNav{
+  justify-content: center;
+}
+
+
+.navbar{
+  background-color: #1B2A49;
+}
+
+
+.navbar .nav-link2 {
+  padding: 0 !important; 
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* centraliza logo e texto */
+  gap: 8px; /* espaço entre logo e nome */
+}
+
+
+.navbar-toggler {
+  margin-left: auto; /* empurra o hambúrguer pra direita */
+}
+
+
+/* MENUS */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: navy;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+}
+
+/* OUTROS BAGUI */
+
+.paragafo2{
+  font-size:200px;
+  margin-top: center;
+}
+
+
+.image {
+  width: 100px;   
+  height: auto;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+.biblia{
+  width: 250px;   
+  height: 150px;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+.padroeira {
+  width:250px;   
+  height: 300px;   
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+.imaculada{
+  height:100px;
+  width: 100px;
+}
+
+
+.teste{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.teste2{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ 
+.botao{
+  pointer-events: none  !important; 
+  font-family: Great Vibes;
+  background-color: none !important;
+  color:white !important;
+  transform: translateY(29%) !important;
+  font: bold;
+  cursor: default !important; 
+}
+
+
+.controle{
+  transform: translateY(-20%) !important;
+}
+
+
+.cor{
+  background-color: #1B2A49;
+}
+
+
+.fixo{
+  position: fixed;
+}
+
+.fonte {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+
+.fonte{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+
+.parteInferiorPag{
+  background: #1B2A49;
+  margin-top: 15%;
+}
+
+.caixaPerg{
+  width: 60%;
+}
+
+.butaDoacao{
+  background-color: #dbdbdbab;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+.butaProx{
+  background-color: #dbdbdbab;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+.butaProx:hover{
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.butaDoacao:hover{
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.opG{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.caixa{
+    width: 90%;
+    min-width: 200px;
+    max-width : 600px;
+    color: black;
+}
+
+
+.baixoNav{
+  background-color: #1B2A49;
+  border-radius: 20px;
+  height: 10px;
+}
+
+.btn-secondary{
+  width: 420px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  padding: 12px 24px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+#meuBotao{
+  color: white;
+  font-weight: bold;
+  background-color: #1B2A49;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  transform: scale(1.025);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.ajudaLink{
+  color: #ffffff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.separacao{
+  border: none;
+  border-top: 5px double #1B2A49;
+  margin: 60px 5%;
+}
+
+@media (max-width: 600px) {
+  .btn-secondary {
+    width: 340px;
+    justify-content: center;
+  }
+  .paragrafo2{
+    font-size: 20px;
+  }
+
+  .caixaPerg{
+    width: 90%;
+  }
+
+  #question-text{
+    font-size: 20px;
+    margin: 20px;
+  }
+
+}
+
+#resultado{
+  
+  background-color: white;
+}
+
+
+/* Ajuda com o rodapé */
+
+.footer {
+  margin-top: auto;
+}
+
+
+.site-main {
+  flex: 1;
+}
+.cor{
+  background-color: #14213D; /* Ou #1B2A49 para deixar uma versão mais clara do azul*/
+ border-radius: 20px;
+}
+
+/* Quando passar o mouse */
+.btn-option:hover {
+    background-color: white;
+    color: #1A2332; /* A cor do fundo escuro, para dar contraste */
+}
+/* Isso força a cor branca nas opções */
+.btn-option {
+    /* Texto branco */
+    color: #ffffff !important; 
+    
+    
+    /* Borda branca */
+    border-color: #ffffff !important; 
+    
+    /* Fundo transparente para ver o azul do cartão */
+    background-color: transparent !important; 
+    
+    /* Deixar um pouco mais grosso para ler melhor */
+    font-weight: 500; 
+}
+
+/* --- EFEITO AO PASSAR O MOUSE (HOVER) --- */
+.btn-option:hover {
+    /* Fundo vira branco */
+    background-color: #ffffff !important; 
+    
+    /* Texto vira preto (ou azul escuro) para dar leitura */
+    color: #1A2332 !important; 
+}
+.esconder{
+  display: none;;
+}

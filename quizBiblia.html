@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+<head>
+  
+  <link rel="stylesheet" href="quizbiblia.css">
+  <link rel="icon" href="Imaculada-removebg-preview.png" type="image/png">
+  <title>Paróquia Imaculada Conceição de Guarabira</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="quizBiblia.js" defer></script>
+
+
+</head>
+<body class="body">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+   
+      <a href="index.html" class="d-flex align-items-center">
+        <img src="Imaculada-removebg-preview.png" alt="Descrição da imagem" class="image">
+      </a>  
+
+      <a class="navbar-brand botao d-none d-lg-inline fonte" href="#">
+        Paróquia Imaculada Conceição
+      </a>  
+
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" 
+        aria-controls="menuNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+     
+      <div class="collapse navbar-collapse" id="menuNav">
+        <br><br><br><br>
+        <ul class="navbar-nav ms-auto controle" id="tetão">
+          <span class="d-inline d-lg-none fonte mb-2">Paróquia Imaculada Conceição</span>
+          <li class="nav-item"><a class="nav-link fonte" href="new_index.html">História</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="padroeira.html">Padroeira</a></li>
+          <li class="nav-item"><a class="nav-link fonte oracao" href="oracaoDoDia.html">Liturgia</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="padres.html">Galeria de Padres</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="fotos.html">Galeria de Fotos</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link fonte" href="quizBiblia.html">Quiz da Bíblia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="site-main">
+    <div class="container teste2 p-5 text-white text-center baixoNav" style="width: 90%;">
+      <h2 class="paragrafo2">O quanto você sabe da bíblia?</h2>
+    </div>
+
+    <br>
+
+    <div class="teste">
+      <img src="png-clipart-the-bible-the-old-and-new-testaments-king-james-version-new-life-version-amplified-bible-holy-bible-cross-objects-removebg-preview.png" alt="Descrição da imagem" class="biblia"> 
+    </div>
+
+    <br>
+
+    <div class="teste">
+        <br><br>
+        <div class="cor caixaPerg">
+          <div>
+            <div id="start-screen" class="text-center cor">
+              <br><br>
+                <h1 class="text-white">Quiz da Bíblia</h1>
+                <br>
+                <p class="text-white">Teste seus conhecimentos acerca das Sagradas Escrituras!!</p>
+                <p class="text-white">(Se você não quiser arriscar, pode clicar em próxima pergunta)</p>
+                <hr class="separacao">
+                <button class="butaDoacao" onclick="iniciarQuiz()">Começar Jogo</button>
+            </div>
+
+            <hr class="separacao">
+
+            <div id="game-screen" class="text-center hide">
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="badge bg-secondary" style="margin: 20px;">Pergunta <span id="q-index">1</span></span>
+                    <span class="badge bg-success" style="margin: 20px;">Pontos: <span id="score">0</span></span>
+                </div>
+                
+                <h4 id="question-text" class="text-white">A pergunta aparecerá aqui</h4>
+
+                <br>
+                
+                <div id="options-container" class="text-white opG"></div>
+
+                <div id="feedback-msg" class="text-white opG"></div>
+  
+            </div>
+
+            <br><br>
+
+            <div class="text-center">
+              <button id="next-btn" class="butaProx hide" onclick="proximaPergunta()">Próxima Pergunta ➡️</button>
+            </div>
+
+            <hr class="separacao">
+
+            <div id="result-screen" class="hide text-center">
+              <div>  
+                <br>
+
+                <div class="display-1 mb-3">🏆</div>
+
+                <h4 class="text-white" >Sua classificação: <span id="titulo"></span></h4>
+
+                <br><br>
+
+                 <br>
+                  <h4 class="text-white" >5 pontos = Leigo 🎄🐰 <span class="esconder "id="final-score"></span></h4>
+                  <h4 class="text-white" >10 pontos = Coroinha 🔔🍇 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >15 pontos = Pescador de Almas 🎣🐟 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >20 pontos = Leitor na Missa 📢💬 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >25 pontos = Ministro de Música 🎸🎤 <span id="final-score"></span></h4>
+                  <h4 class="text-white" >30 pontos = Catequista 👨🏼‍🦳 ✝️ <span id="final-score"></span></h4>
+                  <h4 class="text-white" >40 pontos = Teólogo 🤓📚  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >50 pontos = Padre 🕶️📜  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >80 pontos = Cardeal 🛐🍞  <span id="final-score"></span></h4>
+                  <h4 class="text-white" >100 pontos = Papa 👑  <span id="final-score"></span></h4>
+
+                  <hr class="separacao">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        
+    </div>
+    
+    <br> 
+    
+
+    
+
+
+  </main>
+
+
+  <hr class="separacao">
+
+
+  <footer class="text-center" style="background-color: #1B2A49; color: #ffffff; padding: 40px 0;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 20px;">
+
+     
+      <div style="flex: 1 1 300px; margin-bottom: 20px;">
+        <h3>Contato</h3>
+        <p><strong>Telefone:</strong> (83) 9 9844-1169</p>
+        <p><strong>Email:</strong> fabiana.nunesf@hotmail.com</p>
+      </div>
+
+  
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h3>Redes Sociais</h3>
+        <p>Siga-nos nas redes:</p>
+        <p>
+          <a class="ajudaLink" href="https://www.facebook.com/people/Imaculada-Concei%C3%A7%C3%A3o/pfbid0kVdoyqDM7zFoK3gzGtzh5hFT9bwC7scme3V25dAg8nLdgJfzdbMAH22MaS8eC5jdl/?ref=_ig_profile_ac" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a class="ajudaLink" href="https://www.instagram.com/paroquiadaimaculada_/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="ajudaLink" href="https://www.youtube.com/@paroquiadaimaculada2672" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </p>
+      </div>
+
+      
+      <div style="flex: 1 1 300px; margin-bottom: 20px;">
+        <h3>Localização</h3>
+        <p>Rua Osvaldo Cruz, 115 - Assis Chateaubriand<br>Guarabira - PB<br>CEP: 58200-000</p>
+      </div>
+    </div>
+
+
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid #ffffff33;">
+      <p>&copy; 2025 Paroquia Imaculada Conceição - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
