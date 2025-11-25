@@ -53,120 +53,16 @@
 
   <main class="site-main">
     <div class="container teste2 p-5 mb-5 text-white text-center baixoNav" style="width: 90%;">
-      <h2 class="paragrafo2">Eventos na Paróquia?</h2>
+      <h2 class="paragrafo2">Próximos Eventos</h2>
     </div>
-  
-    <!--  <div class="d-flex"></div>  Sugestão de melhoria para os avisos de eventos-->
-  
- <title>Eventos da Paróquia</title>
-    <style>
-        /* Estilos Básicos (Adapte ao seu CSS) */
-        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
-        
-        .container-eventos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .card-evento {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-
-        .card-evento:hover { transform: translateY(-5px); }
-
-        .card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #ccc;
-        }
-
-        .card-conteudo { padding: 15px; }
-        .data-hora { color: #007bff; font-weight: bold; font-size: 0.9em; }
-        .titulo { margin: 10px 0; font-size: 1.2em; color: #333; }
-        .descricao { color: #666; font-size: 0.95em; }
-    </style>
-</head>
-<body>
-
-    <h1 style="text-align: center;">Próximos Eventos</h1>
+    <h1 style="text-align: center;"></h1>
     
     <div id="lista-eventos" class="container-eventos">
         <p style="text-align: center;">Carregando eventos...</p>
     </div>
 
-    <script>
-        // --- CONFIGURAÇÃO ---
-        // Pegue o ID da sua planilha (aquela parte longa entre /d/ e /edit no link)
-        // Exemplo: docs.google.com/spreadsheets/d/SEU_ID_AQUI/edit
-        const SHEET_ID = '2PACX-1vS1tvV5IHU4s5FVMR5R7yRqkE67T0PVfKidbMjZEKg3QJpAVEDjCkXRqkwJikP1Aw0zGqP6RAckHA8l'; 
-        const URL_CSV = ` https://docs.google.com/spreadsheets/d/e/2PACX-1vS1tvV5IHU4s5FVMR5R7yRqkE67T0PVfKidbMjZEKg3QJpAVEDjCkXRqkwJikP1Aw0zGqP6RAckHA8l/pub?gid=0&single=true&output=csv`;
-
-        async function carregarEventos() {
-            const container = document.getElementById('lista-eventos');
-
-            try {
-                const resposta = await fetch(URL_CSV);
-                const texto = await resposta.text();
-                
-                // Transforma o texto CSV em linhas
-                const linhas = texto.split('\n').slice(1); // Remove o cabeçalho
-                
-                // Limpa o container
-                container.innerHTML = '';
-
-                if(linhas.length === 0) {
-                    container.innerHTML = '<p>Nenhum evento encontrado.</p>';
-                    return;
-                }
-
-                linhas.forEach(linha => {
-                    // Separa as colunas (respeitando aspas do CSV é mais complexo, 
-                    // mas para uso simples isso funciona)
-                    // Colunas: 0=Titulo, 1=Data, 2=Hora, 3=Descricao, 4=Imagem
-                    const colunas = linha.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                    
-                    // Remove aspas extras que o Google coloca
-                    const limpar = (txt) => txt ? txt.replace(/"/g, '') : '';
-
-                    const titulo = limpar(colunas[0]);
-                    const data = limpar(colunas[1]);
-                    const hora = limpar(colunas[2]);
-                    const descricao = limpar(colunas[3]);
-                    const imagem = limpar(colunas[4]);
-
-                    // Só cria o card se tiver título
-                    if(titulo) {
-                        const cardHTML = `
-                            <div class="card-evento">
-                               
-                                <div class="card-conteudo">
-                                    <div class="data-hora">📅 ${data}  ${hora}</div>
-                                    <h3 class="titulo">${titulo}</h3>
-                                    <p class="descricao">${descricao}</p>
-                                </div>
-                            </div>
-                        `;
-                        container.innerHTML += cardHTML;
-                    }
-                });
-
-            } catch (erro) {
-                console.error('Erro ao carregar:', erro);
-                container.innerHTML = '<p>Erro ao carregar eventos.</p>';
-            }
-        }
-
-        // Carrega ao abrir a página
-        carregarEventos();
-        </script>
+      
   </main>
   
 
@@ -213,6 +109,72 @@
     </div>
   </footer>
 
+
+      <script>
+        // --- CONFIGURAÇÃO ---
+        // Pegue o ID da sua planilha (aquela parte longa entre /d/ e /edit no link)
+        // Exemplo: docs.google.com/spreadsheets/d/SEU_ID_AQUI/edit
+        const SHEET_ID = '2PACX-1vS1tvV5IHU4s5FVMR5R7yRqkE67T0PVfKidbMjZEKg3QJpAVEDjCkXRqkwJikP1Aw0zGqP6RAckHA8l'; 
+        const URL_CSV = ` https://docs.google.com/spreadsheets/d/e/2PACX-1vS1tvV5IHU4s5FVMR5R7yRqkE67T0PVfKidbMjZEKg3QJpAVEDjCkXRqkwJikP1Aw0zGqP6RAckHA8l/pub?gid=0&single=true&output=csv`;
+
+        async function carregarEventos() {
+            const container = document.getElementById('lista-eventos');
+
+            try {
+                const resposta = await fetch(URL_CSV);
+                const texto = await resposta.text();
+                
+                // Transforma o texto CSV em linhas
+                const linhas = texto.split('\n').slice(1); // Remove o cabeçalho
+                
+                // Limpa o container
+                container.innerHTML = '';
+
+                if(linhas.length === 0) {
+                    container.innerHTML = '<p>Nenhum evento encontrado.</p>';
+                    return;
+                }
+
+                linhas.forEach(linha => {
+                    // Separa as colunas (respeitando aspas do CSV é mais complexo, 
+                    // mas para uso simples isso funciona)
+                    // Colunas: 0=Titulo, 1=Data, 2=Hora, 3=Descricao, 4=Imagem
+                    const colunas = linha.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    
+                    // Remove aspas extras que o Google coloca
+                    const limpar = (txt) => txt ? txt.replace(/"/g, '') : '';
+
+                    const titulo = limpar(colunas[0]);
+                    const data = limpar(colunas[1]);
+                    const hora = limpar(colunas[2]);
+                    const descricao = limpar(colunas[3]);
+                    const imagem = limpar(colunas[4]);
+
+                    // Só cria o card se tiver título
+                    if(titulo) {
+                        const cardHTML = `
+                            <div class="card-evento">
+                               
+                                <div class="card-conteudo">
+                                    <div class="data-hora">📅 ${data}</div>
+                                    <h3 class="titulo">${titulo}</h3>
+                                    <p class="descricao">${hora}</p>
+                                </div>
+                            </div>
+                        `;
+                        container.innerHTML += cardHTML;
+                    }
+                });
+
+            } catch (erro) {
+                console.error('Erro ao carregar:', erro);
+                container.innerHTML = '<p>Erro ao carregar eventos.</p>';
+            }
+        }
+
+        // Carrega ao abrir a página
+        carregarEventos();
+      </script>
 </body>
 
 </html>
