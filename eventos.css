@@ -10,6 +10,7 @@ OBS: Ver quais partes precisam continuar no codigo
   padding: 0px; 
 }
         
+
 .container-eventos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,6 +20,7 @@ OBS: Ver quais partes precisam continuar no codigo
   margin: 0 auto;
 }
 
+
 .card-evento {
   background: white;
   border-radius: 10px;
@@ -27,9 +29,11 @@ OBS: Ver quais partes precisam continuar no codigo
   transition: transform 0.2s;
 }
 
+
 .card-evento:hover{ 
   transform: translateY(-5px); 
 }
+
 
 .card-img {
   width: 100%;
@@ -38,9 +42,11 @@ OBS: Ver quais partes precisam continuar no codigo
   background-color: #ccc;
 }
 
+
 .card-conteudo{ 
   padding: 15px; 
 }
+
 
 .data-hora{ 
   color: #007bff; 
@@ -48,18 +54,18 @@ OBS: Ver quais partes precisam continuar no codigo
   font-size: 0.9em; 
 }
 
+
 .titulo{ 
   margin: 10px 0; 
   font-size: 1.2em; 
   color: #333; 
 }
 
+
 .descricao{ 
   color: #666; 
   font-size: 0.95em; 
 }
-
-
 
 
 /* BODY */
@@ -75,108 +81,6 @@ OBS: Ver quais partes precisam continuar no codigo
   min-height: 100vh;
 }
 
-/* NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: navy;
-  padding: 10px;
-}
-
-
-.navbar .logo {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-
-.navbar-brand {
-  display: flex;
-  align-items: center; /* centraliza logo e texto */
-  gap: 8px; /* espaço entre logo e nome */
-}
-
-
-.navbar-toggler {
-  margin-left: auto; /* empurra o hambúrguer pra direita */
-}
-
-
-.navbar .nav-link {
-  margin-top: 10px;
-  color: white ;
-  border-radius: 20px; 
-  transition: 0.2s ease;
-  transform: translateY(38%);
-}
-
-
-#tetão .nav-link:hover{
- color:goldenrod
-}
-
-
-#navbarNav{
-  justify-content: center;
-}
-
-
-.navbar{
-  background-color: #1B2A49;
-}
-
-
-.navbar .nav-link2 {
-  padding: 0 !important; 
-}
-
-
-/* MENUS */
-
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.menu li a {
-  color: white;
-  text-decoration: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-
-
-/* Mobile */
-@media (max-width: 600px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: navy;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  #menu-toggle:checked ~ .menu {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-  
-}
 
 /* OUTROS BAGUI */
 
@@ -239,31 +143,14 @@ OBS: Ver quais partes precisam continuar no codigo
 }
 
 
-.cor{
-  background-color: #1B2A49;
-}
-
-
 .fixo{
   position: fixed;
-}
-
-.fonte {
-  text-align: center;
-  color: #64748b;
-  font-size: 0.9rem;
-  margin-top: 12px;
 }
 
 
 .fonte{
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-}
-
-
-.parteInferiorPag{
-  background: #1B2A49;
 }
 
 
@@ -277,35 +164,4 @@ OBS: Ver quais partes precisam continuar no codigo
     min-width: 200px;
     max-width : 600px;
     margin: 0 auto;
-}
-
-
-.baixoNav{
-  background-color: #1B2A49;
-  border-radius: 20px;
-  height: 10px;
-}
-
-.ajudaLink{
-  color: #ffffff;
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.separacao{
-  border: none;
-  border-top: 5px double #1B2A49;
-  margin: 60px 5%;
-}
-
-/* Ajuda com o rodapé */
-
-.footer {
-  margin-top: auto;
-}
-
-
-.site-main {
-  flex: 1;
 }

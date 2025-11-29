@@ -10,109 +10,6 @@
   min-height: 100vh;
 }
 
-/* NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: navy;
-  padding: 10px;
-}
-
-
-.navbar .logo {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-
-.navbar .nav-link {
-  margin-top: 10px;
-  color: white ;
-  border-radius: 20px; 
-  transition: 0.2s ease;
-  transform: translateY(38%);
-}
-
-
-#tetão .nav-link:hover{
- color:goldenrod
-}
-
-
-#navbarNav{
-  justify-content: center;
-}
-
-
-.navbar{
-  background-color: #1B2A49;
-}
-
-
-.navbar .nav-link2 {
-  padding: 0 !important; 
-}
-
-
-.navbar-brand {
-  display: flex;
-  align-items: center; /* centraliza logo e texto */
-  gap: 8px; /* espaço entre logo e nome */
-}
-
-
-.navbar-toggler {
-  margin-left: auto; /* empurra o hambúrguer pra direita */
-}
-
-
-/* MENUS */
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-
-.menu li a {
-  color: white;
-  text-decoration: none;
-}
-
-
-.menu-icon {
-  display: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-
-
-/* Mobile */
-@media (max-width: 600px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: navy;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  #menu-toggle:checked ~ .menu {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-  
-}
 
 /* OUTROS BAGUI */
 
@@ -183,20 +80,8 @@
 }
 
 
-.cor{
-  background-color: #1B2A49;
-}
-
-
 .fixo{
   position: fixed;
-}
-
-.fonte {
-  text-align: center;
-  color: #64748b;
-  font-size: 0.9rem;
-  margin-top: 12px;
 }
 
 
@@ -206,14 +91,10 @@
 }
 
 
-.parteInferiorPag{
-  background: #1B2A49;
-  margin-top: 15%;
-}
-
 .caixaPerg{
   width: 60%;
 }
+
 
 .butaDoacao{
   background-color: #dbdbdbab;
@@ -226,6 +107,7 @@
   transition: 0.1s;
 }
 
+
 .butaProx{
   background-color: #dbdbdbab;
   font-weight: bold;
@@ -237,15 +119,18 @@
   transition: 0.1s;
 }
 
+
 .butaProx:hover{
   border: none;
   background-color: #dbdbdb;
 }
 
+
 .butaDoacao:hover{
   border: none;
   background-color: #dbdbdb;
 }
+
 
 .opG{
   margin-left: 50px;
@@ -266,12 +151,6 @@
 }
 
 
-.baixoNav{
-  background-color: #1B2A49;
-  border-radius: 20px;
-  height: 10px;
-}
-
 .btn-secondary{
   width: 420px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
@@ -288,6 +167,7 @@
   border: none;
 }
 
+
 .btn-secondary:hover {
   background: #ffffff;
   transform: scale(1.025);
@@ -295,18 +175,6 @@
   transition: 0.3s;
 }
 
-.ajudaLink{
-  color: #ffffff;
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.separacao{
-  border: none;
-  border-top: 5px double #1B2A49;
-  margin: 60px 5%;
-}
 
 @media (max-width: 600px) {
   .btn-secondary {
@@ -328,33 +196,27 @@
 
 }
 
-#resultado{
-  
+#resultado{  
   background-color: white;
 }
 
 
-/* Ajuda com o rodapé */
-
-.footer {
-  margin-top: auto;
-}
-
-
-.site-main {
-  flex: 1;
-}
 .cor{
-  background-color: #14213D; /* Ou #1B2A49 para deixar uma versão mais clara do azul*/
- border-radius: 20px;
+  /*background-color: #14213D;  Ou #1B2A49 para deixar uma versão mais clara do azul*/
+  border-radius: 20px;
 }
+
 
 /* Quando passar o mouse */
 .btn-option:hover {
     background-color: white;
     color: #1A2332; /* A cor do fundo escuro, para dar contraste */
 }
+
+
 /* Isso força a cor branca nas opções */
+
+
 .btn-option {
     /* Texto branco */
     color: #ffffff !important; 
@@ -371,6 +233,8 @@
 }
 
 /* --- EFEITO AO PASSAR O MOUSE (HOVER) --- */
+
+
 .btn-option:hover {
     /* Fundo vira branco */
     background-color: #ffffff !important; 
@@ -378,6 +242,8 @@
     /* Texto vira preto (ou azul escuro) para dar leitura */
     color: #1A2332 !important; 
 }
+
+
 .esconder{
   display: none;;
 }

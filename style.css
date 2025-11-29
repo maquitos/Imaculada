@@ -51,6 +51,8 @@
   margin-left: auto; /* empurra o hambúrguer pra direita */
 }
 
+
+
 .navbar .nav-link {
   margin-top: 10px;
   color: #F8F8F2 ;
@@ -326,12 +328,7 @@
   background-color: #1b2a49ee;
 }
 
-.fonte {
-  text-align: center;
-  color: #64748b;
-  font-size: 0.9rem;
-  margin-top: 12px;
-}
+
 
 
 
@@ -345,6 +342,13 @@
   }
   .img-fluid{
     width: 60%;
+  }
+
+  .fonte {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 12px;
   }
 
   .butaDoacao:hover{
