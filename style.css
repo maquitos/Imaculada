@@ -25,103 +25,6 @@
   min-height: 100vh;
 }
 
-/* NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: navy;
-  padding: 10px;
-}
-
-.navbar .logo {
-  color: #F8F8F2;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center; /* centraliza logo e texto */
-  gap: 8px; /* espaço entre logo e nome */
-}
-
-.navbar-toggler {
-  margin-left: auto; /* empurra o hambúrguer pra direita */
-}
-
-
-
-.navbar .nav-link {
-  margin-top: 10px;
-  color: #F8F8F2 ;
-  border-radius: 20px; 
-  transition: 0.2s ease;
-  transform: translateY(38%);
-  
-}
-
-#tetão .nav-link:hover{
- color:#D4AF37
-}
-
-#navbarNav{
-  justify-content: center;
-}
-
-.navbar{
-  background-color: #1B2A49;
-}
-.navbar .nav-link2 {
-  padding: 0 !important; 
-}
-
-
-/* MENUS */
-
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.menu li a {
-  color: #F8F8F2;
-  text-decoration: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 26px;
-  color: #F8F8F2;
-  cursor: pointer;
-}
-
-
-/* Mobile */
-@media (max-width: 600px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: navy;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  #menu-toggle:checked ~ .menu {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-  
-}
-
 
 /* OUTRAS COISAS */
 
@@ -199,11 +102,6 @@
 }
 
 
-.cor{
-  background-color: #1B2A49;
-}
-
-
 .fixo{
   position: fixed;
 }
@@ -215,33 +113,19 @@
 }
 
 
-.parteInferiorPag{
-  background: #1B2A49;
-}
-
-
-.baixoNav{
-  background-color: #1B2A49;
-  border-radius: 20px;
-  height: 10px;
-}
-
-.fundoPadres{
-  background-color: #1B2A49;
-  border-radius: 20px;
-}
-
 .img-fluid{
   width: 80%;
   height: auto;
   margin: 20px;
 }
 
+
 .section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
+
 
 #programacao{
   color: #ffffff;
@@ -256,7 +140,12 @@
   width: 30%;
 }
 
+
 .espaco{
+  margin-top: 40px;
+}
+
+.espaco2{
   margin-top: 40px;
 }
 
@@ -265,12 +154,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-}
-
-.separacao{
-  border: none;
-  border-top: 5px double #1B2A49;
-  margin: 60px 5%;
 }
 
 
@@ -286,13 +169,6 @@
   color: #1B2A49;
 } 
 
-
-.ajudaLink{
-  color: #ffffff;
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 20px;
-}
 
 .conteudo{
     margin: 40px;
@@ -329,9 +205,6 @@
 }
 
 
-
-
-
 @media (max-width: 600px) {
 
   .site-main{
@@ -342,13 +215,6 @@
   }
   .img-fluid{
     width: 60%;
-  }
-
-  .fonte {
-    text-align: center;
-    color: #64748b;
-    font-size: 0.9rem;
-    margin-top: 12px;
   }
 
   .butaDoacao:hover{
@@ -365,18 +231,8 @@
     width: 60%;
   }
 
+  .espaco2{
+    margin-top: 20px;
+  }
+
 }
-
-
-/* Ajuda com o rodapé */
-
-.footer {
-  margin-top: auto;
-  
-}
-
-
-.site-main {
-  flex: 1;
-}
-
